@@ -8,7 +8,7 @@ HolyPilot - hosted MCP-сервис. Клиент не скачивает GitHub
 
 Клиент делает две вещи:
 
-1. Подключает рекламные кабинеты через HolyMedia dashboard и OAuth.
+1. Подключает рекламные кабинеты через HolyPilot dashboard и OAuth.
 2. Подключает уже работающий hosted MCP endpoint в Codex, Claude, Gemini или другой MCP-клиент.
 
 ## Быстрый путь beta-пользователя

@@ -50,7 +50,7 @@
 ## C. MCP client
 
 - Codex видит HolyPilot server.
-- Claude видит HolyMedia custom connector.
+- Claude видит HolyPilot custom connector.
 - Tools отображаются в MCP client.
 - `run_diagnostics` работает.
 - `list_connected_platforms` работает.

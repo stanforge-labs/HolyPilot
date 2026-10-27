@@ -4,7 +4,7 @@
 
 ## Главный принцип
 
-HolyPilot уже развернут как hosted service. Пользователь подключает внешний MCP endpoint, а рекламные аккаунты подключает отдельно через HolyMedia dashboard.
+HolyPilot уже развернут как hosted service. Пользователь подключает внешний MCP endpoint, а рекламные аккаунты подключает отдельно через HolyPilot dashboard.
 
 Не нужно:
 
@@ -51,5 +51,5 @@ Authorization: Bearer <PERSONAL_MCP_TOKEN>
 
 - Возможности конкретного MCP-клиента могут отличаться.
 - Если клиент не поддерживает custom headers/Bearer token, нужен другой supported auth способ. Для ChatGPT Apps/connector сценария безопасный путь - OAuth 2.1, а не отключение auth.
-- Рекламные аккаунты подключаются только через HolyMedia dashboard, не внутри Gemini/Codex/Claude.
+- Рекламные аккаунты подключаются только через HolyPilot dashboard, не внутри Gemini/Codex/Claude.
 - Dangerous actions остаются preview-only.

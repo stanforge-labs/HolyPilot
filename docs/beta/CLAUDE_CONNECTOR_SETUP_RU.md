@@ -1,6 +1,6 @@
 # Подключение hosted HolyPilot в Claude
 
-Claude может подключать HolyPilot как remote MCP server/custom connector, если выбранный клиент поддерживает hosted MCP URL и access token. Сервер уже должен быть развернут на VPS/VDS, а рекламные аккаунты должны быть подключены через HolyMedia dashboard.
+Claude может подключать HolyPilot как remote MCP server/custom connector, если выбранный клиент поддерживает hosted MCP URL и access token. Сервер уже должен быть развернут на VPS/VDS, а рекламные аккаунты должны быть подключены через HolyPilot dashboard.
 
 ## Что нужно заранее
 
