@@ -36,7 +36,7 @@ export default function OpenGraphImage() {
             background: "#4158b4",
           }}
         />{" "}
-        HOLYMEDIA MCP
+        HolyPilot
       </div>
       <div
         style={{

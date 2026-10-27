@@ -22,7 +22,7 @@
 2. Не копировать их secrets в live HolyMedia env.
 3. В Meta Developers выполнить app secret rotation.
 4. Инвалидировать старые long-lived user access tokens.
-5. Создать/выбрать один hosted OAuth app для HolyMedia MCP.
+5. Создать/выбрать один hosted OAuth app для HolyPilot.
 6. Настроить новый redirect URL:
 
 ```text
@@ -50,7 +50,7 @@ tokens/
 
 Не делать history rewrite без отдельного решения: это рискованная операция и должна быть согласована отдельно. Даже после удаления из Git считать ранее опубликованные secrets compromised и rotated.
 
-## Что проверять в HolyMedia MCP
+## Что проверять в HolyPilot
 
 - `.env` не tracked.
 - `ads_config.yaml` не tracked.

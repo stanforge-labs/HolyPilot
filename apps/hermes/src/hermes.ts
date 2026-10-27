@@ -448,7 +448,7 @@ export class McpHttpClient implements HermesMcpClient {
     });
     const payload = (await response.json()) as MpcResponse;
     if (!response.ok || payload.error)
-      throw new Error("HolyMedia MCP request failed.");
+      throw new Error("HolyPilot request failed.");
     const text = payload.result?.content?.find(
       (item) => item.type === "text",
     )?.text;
@@ -603,7 +603,7 @@ export class HermesGateway {
       );
       output += renderComparison(currentResult, previousResult);
       output +=
-        "\n\nВывод: сравнение построено по данным HolyMedia MCP за два завершённых периода.";
+        "\n\nВывод: сравнение построено по данным HolyPilot за два завершённых периода.";
     }
     const asksForLeader =
       /(какая|какой|лидир|больше всего|максималь|топ|кампани)/i.test(query);

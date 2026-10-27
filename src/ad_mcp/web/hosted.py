@@ -184,7 +184,7 @@ class HostedConnectionService:
                 "auth": "authorization_header_or_bearer_env",
                 "summary": "Готово: используйте адрес подключения и персональный ключ доступа.",
                 "instructions": [
-                    "Добавьте HolyMedia MCP как HTTP-подключение.",
+                    "Добавьте HolyPilot как HTTP-подключение.",
                     "URL: используйте адрес подключения из dashboard.",
                     "Для доступа используйте персональный ключ из раздела MCP.",
                     "После добавления откройте новый чат и спросите про подключенные рекламные аккаунты.",
@@ -195,11 +195,11 @@ class HostedConnectionService:
                 "status": "oauth_ready",
                 "transport": "remote_mcp_http",
                 "auth": "oauth_2_1_pkce_or_authorization_token",
-                "summary": "Claude подключается через custom connector и вход в HolyMedia MCP.",
+                "summary": "Claude подключается через custom connector и вход в HolyPilot.",
                 "instructions": [
                     "В Claude.ai Add custom connector можно указать Name и Remote MCP server URL.",
                     "OAuth Client ID/Secret можно оставить пустыми, если Claude подключается автоматически.",
-                    "Пользователь войдет в HolyMedia MCP в браузере и разрешит доступ к своему рабочему пространству.",
+                    "Пользователь войдет в HolyPilot в браузере и разрешит доступ к своему рабочему пространству.",
                     "Персональный ключ доступа не нужно вставлять в OAuth Client Secret.",
                 ],
             },
@@ -209,18 +209,18 @@ class HostedConnectionService:
                 "transport": "streamable_http",
                 "auth": "oauth_2_1_pkce_with_cimd",
                 "self_serve_ready": True,
-                "summary": "ChatGPT подключается через custom connector и безопасный вход в HolyMedia MCP.",
+                "summary": "ChatGPT подключается через custom connector и безопасный вход в HolyPilot.",
                 "instructions": [
                     "В ChatGPT custom connector укажите URL из dashboard, обычно https://mcp.holymedia.kz/mcp.",
                     "Authentication: OAuth.",
                     "В расширенных настройках используйте автоматическую регистрацию клиента, если ChatGPT показывает этот вариант.",
                     "Token endpoint authentication method: none.",
-                    "При первом использовании ChatGPT откроет вход в HolyMedia MCP.",
+                    "При первом использовании ChatGPT откроет вход в HolyPilot.",
                 ],
             },
         }
         return {
-            "name": "HolyMedia MCP",
+            "name": "HolyPilot",
             "transport": "streamable_http",
             "endpoint_path": endpoint_path,
             "url": public_url,
@@ -239,7 +239,7 @@ class HostedConnectionService:
             "chatgpt_oauth_required": False,
             "chatgpt_cimd_supported": True,
             "status": "transport_available",
-            "message": "HolyMedia MCP доступен по этому адресу подключения.",
+            "message": "HolyPilot доступен по этому адресу подключения.",
         }
 
     def connections(self, user: Any | None = None) -> dict[str, Any]:

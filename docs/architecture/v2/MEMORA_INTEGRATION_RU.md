@@ -1,4 +1,4 @@
-# Memora в HolyMedia MCP
+# Memora в HolyPilot
 
 ## Назначение
 

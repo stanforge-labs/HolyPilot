@@ -54,7 +54,7 @@ wait_for_status() {
   fail "Expected ${url} to return ${expected}, got ${status:-no response}."
 }
 
-echo "HolyMedia MCP staging deploy"
+echo "HolyPilot staging deploy"
 echo "Target ref: ${TARGET_REF}"
 
 if [[ "$EUID" -ne 0 ]]; then

@@ -1,4 +1,4 @@
-# HolyMedia MCP V2 - Phase C Cutover Result
+# HolyPilot V2 - Phase C Cutover Result
 
 Date: 2026-08-22/23 UTC
 

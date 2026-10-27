@@ -435,7 +435,7 @@ export class McpPreviewService {
         message:
           appReviewPolicy.kind === "blocked"
             ? appReviewPolicy.message
-            : "HolyMedia MCP работает в режиме чтения и не изменяет рекламные кампании.",
+            : "HolyPilot работает в режиме чтения и не изменяет рекламные кампании.",
       };
     }
     try {
@@ -671,7 +671,7 @@ export class McpPreviewService {
         provider_write_enabled: true,
         reread: after,
         message:
-          "Название отправлено в Meta, но проверка состояния кампании не прошла. Другие поля не изменялись HolyMedia MCP.",
+          "Название отправлено в Meta, но проверка состояния кампании не прошла. Другие поля не изменялись HolyPilot.",
       };
     return {
       status: "committed",

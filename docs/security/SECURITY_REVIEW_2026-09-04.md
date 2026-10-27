@@ -1,4 +1,4 @@
-# HolyMedia MCP — финальный Code & Security Review
+# HolyPilot — финальный Code & Security Review
 
 Дата: 2026-09-04
 

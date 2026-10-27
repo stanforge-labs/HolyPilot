@@ -1,6 +1,6 @@
-# Live VPS runbook для hosted beta HolyMedia MCP
+# Live VPS runbook для hosted beta HolyPilot
 
-Этот runbook описывает первый live deploy HolyMedia MCP на реальном VPS/WPS. Это инструкция для оператора или разработчика проекта. Beta-клиент не клонирует GitHub repo, не запускает MCP локально и не редактирует `.env`: клиент получает dashboard URL, hosted MCP URL и beta token.
+Этот runbook описывает первый live deploy HolyPilot на реальном VPS/WPS. Это инструкция для оператора или разработчика проекта. Beta-клиент не клонирует GitHub repo, не запускает MCP локально и не редактирует `.env`: клиент получает dashboard URL, hosted MCP URL и beta token.
 
 ## A. Предварительные требования
 

@@ -34,7 +34,7 @@ type ApprovalView = {
 
 const copy = {
   ru: {
-    eyebrow: "HOLYMEDIA MCP",
+    eyebrow: "HolyPilot",
     title: "Подтверждение изменения",
     lead: "Проверьте изменение перед выполнением в рекламном кабинете.",
     account: "Рекламный кабинет",
@@ -59,7 +59,7 @@ const copy = {
     noMutation: "Подтверждение здесь ещё не изменяет кампанию в Meta Ads.",
   },
   en: {
-    eyebrow: "HOLYMEDIA MCP",
+    eyebrow: "HolyPilot",
     title: "Approve a change",
     lead: "Review the change before it is executed in your ad account.",
     account: "Ad account",
@@ -105,7 +105,7 @@ export default function McpApprovalPage() {
   const [busy, setBusy] = useState(false);
 
   useEffect(() => {
-    document.title = `${t.title} — HolyMedia MCP`;
+    document.title = `${t.title} — HolyPilot`;
   }, [t.title]);
 
   useEffect(() => {
@@ -242,7 +242,7 @@ export default function McpApprovalPage() {
           <a
             className="oauth-consent-brand"
             href={localizedHref("/", language)}
-            aria-label="HolyMedia MCP"
+            aria-label="HolyPilot"
           >
             <BrandLockup />
           </a>

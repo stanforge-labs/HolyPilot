@@ -321,7 +321,7 @@ export default function AdminPage() {
         <section className="admin-content" aria-live="polite">
           <div className="admin-page-head">
             <div>
-              <p className="eyebrow">HOLYMEDIA MCP</p>
+              <p className="eyebrow">HolyPilot</p>
               <h1>{labels[section]}</h1>
             </div>
             {busy && <span className="status-badge">Обновление…</span>}
@@ -458,7 +458,7 @@ export default function AdminPage() {
                   : "Снять полный бессрочный доступ?",
               body:
                 action === "assign"
-                  ? "Вы действительно хотите предоставить этой компании полный бессрочный доступ ко всем функциям HolyMedia MCP? Оплата и срок действия не создаются."
+                  ? "Вы действительно хотите предоставить этой компании полный бессрочный доступ ко всем функциям HolyPilot? Оплата и срок действия не создаются."
                   : "Бессрочный доступ будет снят. После этого можно назначить обычный коммерческий тариф или trial.",
               action: () =>
                 mutate(
@@ -545,7 +545,7 @@ function AdminLogin({ onAuthenticated }: { onAuthenticated: () => void }) {
       <section className="admin-login__card">
         <LanguageSwitcher compact />
         <BrandLockup />
-        <p className="eyebrow">HOLYMEDIA MCP · SYSTEM ACCESS</p>
+        <p className="eyebrow">HolyPilot · SYSTEM ACCESS</p>
         <h1>Вход в админ-панель</h1>
         <p className="muted">
           Отдельная защищённая сессия. Обычный клиентский вход здесь не

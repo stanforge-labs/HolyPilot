@@ -1,6 +1,6 @@
 ---
 name: ga4-analytics
-description: Use the HolyMedia MCP Google Analytics 4 tools to investigate traffic, acquisition, content, events and period changes without changing GA4 configuration or data.
+description: Use the HolyPilot Google Analytics 4 tools to investigate traffic, acquisition, content, events and period changes without changing GA4 configuration or data.
 ---
 
 # Google Analytics 4

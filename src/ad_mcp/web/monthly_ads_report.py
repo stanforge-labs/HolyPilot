@@ -172,7 +172,7 @@ def build_monthly_ads_report_docx(dataset: dict[str, Any]) -> bytes:
     cover = document.add_paragraph()
     cover.alignment = WD_ALIGN_PARAGRAPH.LEFT
     cover.paragraph_format.space_before = Pt(40)
-    run = cover.add_run("HOLYMEDIA MCP")
+    run = cover.add_run("HolyPilot")
     run.font.name = "Aptos Display"
     run.font.size = Pt(11)
     run.font.bold = True
@@ -288,11 +288,11 @@ def build_monthly_ads_report_docx(dataset: dict[str, Any]) -> bytes:
     source_rows = [[str(source.get("source_api", "—")), str(source.get("data_status", "—")), str(source.get("fetched_at", "—"))]]
     _add_table(document, ["Источник", "Статус", "Получено"], source_rows, widths=[2.7, 1.4, 2.3])
     _add_body(document, f"Report run ID: {dataset.get('report_run_id', '—')}", color=MID_GRAY)
-    _add_body(document, "Отчёт сформирован HolyMedia MCP. Числа относятся только к выбранному рекламному кабинету и указанному периоду.", color=MID_GRAY)
+    _add_body(document, "Отчёт сформирован HolyPilot. Числа относятся только к выбранному рекламному кабинету и указанному периоду.", color=MID_GRAY)
 
     footer = section.footer.paragraphs[0]
     footer.alignment = WD_ALIGN_PARAGRAPH.RIGHT
-    footer_run = footer.add_run("HolyMedia MCP · проверенный отчёт")
+    footer_run = footer.add_run("HolyPilot · проверенный отчёт")
     footer_run.font.name = "Aptos"
     footer_run.font.size = Pt(8)
     footer_run.font.color.rgb = RGBColor.from_string(MID_GRAY)

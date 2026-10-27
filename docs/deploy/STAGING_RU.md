@@ -1,4 +1,4 @@
-# Staging-среда HolyMedia MCP
+# Staging-среда HolyPilot
 
 Этот runbook описывает отдельную staging-среду для проверки изменений перед выкладкой на live `https://mcp.holymedia.kz`.
 

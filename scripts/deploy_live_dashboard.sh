@@ -52,7 +52,7 @@ wait_for_status() {
   fail "Expected ${url} to return ${expected}, got ${status:-no response}."
 }
 
-echo "HolyMedia MCP live dashboard deploy"
+echo "HolyPilot live dashboard deploy"
 
 if [[ "$(pwd -P)" != "$PROJECT_DIR" ]]; then
   echo "WARNING: current directory is not ${PROJECT_DIR}; switching to ${PROJECT_DIR}."

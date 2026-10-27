@@ -69,7 +69,7 @@ test("ChatGPT CIMD consent uses verified client branding", async ({ page }) => {
     page.getByRole("heading", { name: "Подключить ChatGPT" }),
   ).toBeVisible();
   await expect(
-    page.getByText("ChatGPT запрашивает доступ к вашему HolyMedia MCP."),
+    page.getByText("ChatGPT запрашивает доступ к вашему HolyPilot."),
   ).toBeVisible();
   await expect(page.getByText("ChatGPT сможет")).toBeVisible();
   await expect(page.getByText("ChatGPT не получает")).toBeVisible();

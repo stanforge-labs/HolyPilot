@@ -1,6 +1,6 @@
 # Systemd service
 
-Для текущей архитектуры выбран systemd, потому что HolyMedia MCP на VPS запускается как два Python-процесса за reverse proxy:
+Для текущей архитектуры выбран systemd, потому что HolyPilot на VPS запускается как два Python-процесса за reverse proxy:
 
 - `ad-mcp-web` для dashboard/API;
 - `ad-mcp-http` для hosted MCP transport.

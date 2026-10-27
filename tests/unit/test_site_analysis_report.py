@@ -37,6 +37,6 @@ def test_build_site_analysis_docx_contains_client_sections() -> None:
     assert report.startswith(b"PK")
     document = docx.Document(io.BytesIO(report))
     text = "\n".join(paragraph.text for paragraph in document.paragraphs)
-    assert "AI-анализ сайта HolyMedia MCP" in text
+    assert "AI-анализ сайта HolyPilot" in text
     assert "Диагностика и доказательства" in text
     assert "Разбор первого экрана" in text

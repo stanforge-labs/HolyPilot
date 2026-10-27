@@ -1,4 +1,4 @@
-# HolyMedia MCP SaaS foundation
+# HolyPilot SaaS foundation
 
 Этот документ фиксирует первый безопасный шаг перехода от beta access dashboard к SaaS-flow.
 

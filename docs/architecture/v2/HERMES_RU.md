@@ -10,10 +10,10 @@ MCP HTTP. Он не импортирует database package и не получа
 - Telegram bot token;
 - scoped `HERMES_MCP_TOKEN`;
 - непустой `HERMES_ALLOWED_CHAT_IDS`;
-- HTTP(S) URL HolyMedia MCP без user/password в URL.
+- HTTP(S) URL HolyPilot без user/password в URL.
 
 `HERMES_CHAT_ACCOUNT_BINDINGS` дополнительно фиксирует чат на конкретном account
-ID. Итоговое ограничение всё равно проверяет HolyMedia MCP service token, поэтому
+ID. Итоговое ограничение всё равно проверяет HolyPilot service token, поэтому
 конфигурация Hermes не может расширить workspace или account scope.
 
 ## Обработка сообщений

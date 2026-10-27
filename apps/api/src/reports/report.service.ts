@@ -203,7 +203,7 @@ async function pptxBuffer(
   );
   zip.file(
     "docProps/core.xml",
-    `<?xml version="1.0" encoding="UTF-8"?><cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/"><dc:title>${escapeXml(title)}</dc:title><dc:creator>HolyMedia MCP</dc:creator></cp:coreProperties>`,
+    `<?xml version="1.0" encoding="UTF-8"?><cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/"><dc:title>${escapeXml(title)}</dc:title><dc:creator>HolyPilot</dc:creator></cp:coreProperties>`,
   );
   zip.file(
     "ppt/presentation.xml",
@@ -442,7 +442,7 @@ export class ReportService {
     }).format(new Date(report.generatedAt));
 
     const document = new Document({
-      creator: "HolyMedia MCP",
+      creator: "HolyPilot",
       title: `Отчёт по рекламному кабинету: ${report.account.name}`,
       subject: "Клиентский отчёт по эффективности рекламы",
       description:
@@ -461,7 +461,7 @@ export class ReportService {
                   alignment: AlignmentType.RIGHT,
                   children: [
                     new TextRun({
-                      text: "HOLYMEDIA MCP  ·  PERFORMANCE REPORT",
+                      text: "HolyPilot  ·  PERFORMANCE REPORT",
                       color: "64748B",
                       size: 16,
                       bold: true,
@@ -728,7 +728,7 @@ export class ReportService {
         cover.rect(0, 0, 13.333, 7.5, PPT.purple);
         cover.ellipse(9.6, -1.15, 4.2, 4.2, "6E3889");
         cover.ellipse(10.75, 4.7, 2.1, 2.1, "5A2873");
-        cover.text(0.82, 1.35, 8.9, 0.45, "HOLYMEDIA MCP", {
+        cover.text(0.82, 1.35, 8.9, 0.45, "HolyPilot", {
           color: PPT.white,
           fontSize: 16,
           bold: true,

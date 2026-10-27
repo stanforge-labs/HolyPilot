@@ -64,7 +64,7 @@ export function FeedbackBlock({ workspaceId }: { workspaceId: string }) {
   const copy = ru
     ? {
         eyebrow: "Обратная связь",
-        title: "Есть пожелание по HolyMedia MCP?",
+        title: "Есть пожелание по HolyPilot?",
         description:
           "Опишите идею, вопрос или проблему — мы получим заявку и вернёмся с ответом.",
         category: "О чём сообщение?",
@@ -87,7 +87,7 @@ export function FeedbackBlock({ workspaceId }: { workspaceId: string }) {
       }
     : {
         eyebrow: "Feedback",
-        title: "Have feedback about HolyMedia MCP?",
+        title: "Have feedback about HolyPilot?",
         description:
           "Describe an idea, question, or problem. We will receive your request and reply.",
         category: "What is this about?",

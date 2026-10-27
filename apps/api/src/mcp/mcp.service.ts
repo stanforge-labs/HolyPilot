@@ -2478,7 +2478,7 @@ function toolDescription(name: string): string {
     )
   )
     return "Commit the exact explicitly confirmed preview_token using the same MCP key. Send only {preview_token}. The controlled policy allows only the prepared Meta account/campaign, PAUSED and name-only; the safe new name is bound to the preview. Reads Meta before and after the mutation. Generic writes remain blocked.";
-  return `HolyMedia MCP compatibility tool: ${name}`;
+  return `HolyPilot compatibility tool: ${name}`;
 }
 
 function googleKeywordToolSchema(

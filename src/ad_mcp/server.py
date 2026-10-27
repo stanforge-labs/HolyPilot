@@ -150,7 +150,7 @@ def create_server(settings: Settings | None = None, *, hosted_http: bool = False
     if hosted_http:
         auth_settings, token_verifier = build_mcp_auth(settings)
     mcp = FastMCP(
-        "HolyMedia MCP",
+        "HolyPilot",
         host=settings.mcp_http_host,
         port=settings.mcp_http_port,
         streamable_http_path=settings.mcp_route_path,

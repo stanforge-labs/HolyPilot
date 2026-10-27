@@ -222,7 +222,7 @@ function messageText(row: {
   const email = escapeHtml(row.user.email);
   const tariff = tariffPresentation(row.planKey);
   const lines = [
-    "<b>💬 Новая заявка HolyMedia MCP</b>",
+    "<b>💬 Новая заявка HolyPilot</b>",
     "",
     `<b>Тема:</b> ${escapeHtml(categoryLabels[row.category] ?? "Обращение")}`,
     `<b>Пользователь:</b> ${escapeHtml(row.user.name)}`,

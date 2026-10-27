@@ -31,14 +31,14 @@ function copyFor(clientName: string) {
     ru: {
       eyebrow: "БЕЗОПАСНОЕ ПОДКЛЮЧЕНИЕ",
       title: `Подключить ${clientName}`,
-      lead: `${clientName} запрашивает доступ к вашему HolyMedia MCP.`,
+      lead: `${clientName} запрашивает доступ к вашему HolyPilot.`,
       company: "Компания",
       chooseCompany: `К какой компании подключить ${clientName}?`,
       canTitle: `${clientName} сможет`,
       writeTitle: "Отдельное разрешение на изменение",
       writeChoice: "Разрешить подтверждённые мной изменения",
       writeConsent:
-        "Разрешить HolyMedia MCP выполнять подтверждённые вами изменения в подключённых рекламных аккаунтах. Каждое изменение требует отдельного просмотра и подтверждения.",
+        "Разрешить HolyPilot выполнять подтверждённые вами изменения в подключённых рекламных аккаунтах. Каждое изменение требует отдельного просмотра и подтверждения.",
       can: [
         "видеть подключённые рекламные кабинеты этой компании;",
         "читать доступные рекламные данные;",
@@ -46,7 +46,7 @@ function copyFor(clientName: string) {
       ],
       cannotTitle: `${clientName} не получает`,
       cannot: [
-        "пароль HolyMedia MCP;",
+        "пароль HolyPilot;",
         "OAuth-токены Google, Meta, Яндекс или TikTok;",
         "данные других компаний.",
       ],
@@ -63,14 +63,14 @@ function copyFor(clientName: string) {
     en: {
       eyebrow: "SECURE CONNECTION",
       title: `Connect ${clientName}`,
-      lead: `${clientName} is requesting access to your HolyMedia MCP.`,
+      lead: `${clientName} is requesting access to your HolyPilot.`,
       company: "Company",
       chooseCompany: `Which company should ${clientName} connect to?`,
       canTitle: `${clientName} can`,
       writeTitle: "Separate permission to make changes",
       writeChoice: "Allow changes I separately approve",
       writeConsent:
-        "Allow HolyMedia MCP to make changes you confirm in connected advertising accounts. Each change requires its own preview and confirmation.",
+        "Allow HolyPilot to make changes you confirm in connected advertising accounts. Each change requires its own preview and confirmation.",
       can: [
         "see the connected advertising accounts of this company;",
         "read available advertising data;",
@@ -78,7 +78,7 @@ function copyFor(clientName: string) {
       ],
       cannotTitle: `${clientName} does not receive`,
       cannot: [
-        "your HolyMedia MCP password;",
+        "your HolyPilot password;",
         "Google, Meta, Yandex, or TikTok OAuth tokens;",
         "data from other companies.",
       ],
@@ -126,7 +126,7 @@ export default function ClaudeConsentPage() {
     context?.scope.split(/\s+/).includes("adforge:mcp:write") ?? false;
 
   useEffect(() => {
-    document.title = `${t.title} — HolyMedia MCP`;
+    document.title = `${t.title} — HolyPilot`;
   }, [t.title]);
 
   useEffect(() => {
@@ -212,7 +212,7 @@ export default function ClaudeConsentPage() {
           <a
             className="oauth-consent-brand"
             href={localizedHref("/", language)}
-            aria-label="HolyMedia MCP"
+            aria-label="HolyPilot"
           >
             <BrandLockup />
           </a>

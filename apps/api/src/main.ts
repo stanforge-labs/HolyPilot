@@ -82,7 +82,7 @@ async function bootstrap(): Promise<void> {
     const document = SwaggerModule.createDocument(
       app,
       new DocumentBuilder()
-        .setTitle("HolyMedia MCP v2 API")
+        .setTitle("HolyPilot v2 API")
         .setVersion("1.0")
         .build(),
     );

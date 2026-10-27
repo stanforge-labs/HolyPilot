@@ -190,8 +190,8 @@ def build_monthly_ads_report_pdf(dataset: dict[str, Any]) -> bytes:
     font, bold, _ = _register_fonts()
     buffer = io.BytesIO()
     canvas = pdf_canvas.Canvas(buffer, pagesize=(PAGE_WIDTH, PAGE_HEIGHT))
-    canvas.setTitle(str(dataset.get("title") or "HolyMedia MCP — отчёт по рекламе"))
-    canvas.setAuthor("HolyMedia MCP")
+    canvas.setTitle(str(dataset.get("title") or "HolyPilot — отчёт по рекламе"))
+    canvas.setAuthor("HolyPilot")
 
     account = dataset.get("account", {}) if isinstance(dataset.get("account"), dict) else {}
     period = dataset.get("period", {}) if isinstance(dataset.get("period"), dict) else {}
@@ -214,7 +214,7 @@ def build_monthly_ads_report_pdf(dataset: dict[str, Any]) -> bytes:
     canvas.circle(880, 160, 125, fill=1, stroke=0)
     canvas.setFillColor(HexColor("#875BA0"))
     canvas.circle(735, 122, 82, fill=1, stroke=0)
-    _draw_text(canvas, "HOLYMEDIA MCP", 58, 466, font=bold, size=12, color="#DCC7E6")
+    _draw_text(canvas, "HolyPilot", 58, 466, font=bold, size=12, color="#DCC7E6")
     _draw_text(canvas, "Отчёт по рекламным", 58, 356, font=bold, size=36, color=WHITE)
     _draw_text(canvas, "кампаниям", 58, 312, font=bold, size=36, color=WHITE)
     _draw_text(canvas, f"{start} — {end}", 60, 255, font=font, size=19, color="#DCC7E6")
@@ -241,7 +241,7 @@ def build_monthly_ads_report_pdf(dataset: dict[str, Any]) -> bytes:
         ["Стоимость конверсии", _fmt(_value(dataset, "cpa"), currency=currency), "Статус данных", data_status],
     ]
     _table(canvas, 54, 230, [145, 185, 190, 332], ["Показатель", "Значение", "Показатель", "Значение"], summary_rows, font=font, bold=bold)
-    _footer(canvas, "HolyMedia MCP · цифры относятся только к выбранному кабинету и периоду", font=font)
+    _footer(canvas, "HolyPilot · цифры относятся только к выбранному кабинету и периоду", font=font)
     canvas.showPage()
 
     # Comparison
@@ -320,7 +320,7 @@ def build_monthly_ads_report_pdf(dataset: dict[str, Any]) -> bytes:
     canvas.rect(0, 0, PAGE_WIDTH, PAGE_HEIGHT, fill=1, stroke=0)
     _page_header(canvas, "Ограничения и методология", 6, font=font, bold=bold)
     _draw_text(canvas, "Что вошло в отчёт", 54, 438, font=bold, size=18, color=PURPLE)
-    _draw_wrapped(canvas, "Данные собраны через HolyMedia MCP из подключённого рекламного кабинета. Значения агрегированы за выбранный период, сравнение рассчитано локально.", 54, 410, 420, font=font, size=12, leading=18, color=INK, max_lines=4)
+    _draw_wrapped(canvas, "Данные собраны через HolyPilot из подключённого рекламного кабинета. Значения агрегированы за выбранный период, сравнение рассчитано локально.", 54, 410, 420, font=font, size=12, leading=18, color=INK, max_lines=4)
     _draw_text(canvas, "Что пока не подтверждено", 510, 438, font=bold, size=18, color=PURPLE)
     limitations = [str(item) for item in dataset.get("limitations", []) if item]
     unknowns = [str(item) for item in dataset.get("unknowns", []) if item]
@@ -343,7 +343,7 @@ def build_monthly_ads_report_pdf(dataset: dict[str, Any]) -> bytes:
     canvas.setFillColor(HexColor("#6A3D82"))
     canvas.circle(830, 110, 170, fill=1, stroke=0)
     _draw_text(canvas, "Спасибо за внимание", 260, 286, font=bold, size=34, color=WHITE)
-    _draw_text(canvas, "Отчёт подготовлен в HolyMedia MCP", 330, 240, font=font, size=13, color="#DCC7E6")
+    _draw_text(canvas, "Отчёт подготовлен в HolyPilot", 330, 240, font=font, size=13, color="#DCC7E6")
     _draw_text(canvas, f"{account_name} · {start} — {end}", 350, 70, font=font, size=11, color="#DCC7E6")
     canvas.showPage()
     canvas.save()

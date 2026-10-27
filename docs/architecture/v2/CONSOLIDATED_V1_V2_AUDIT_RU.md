@@ -1,4 +1,4 @@
-# HolyMedia MCP V1 → V2: consolidated audit
+# HolyPilot V1 → V2: consolidated audit
 
 **Дата среза:** 22 августа 2026 года  
 **Ветка:** `feat/install-memora`  
@@ -350,7 +350,7 @@ Final operator verdict: `PHASE C COMPLETE - V2 IS PRODUCTION`.
 - Free disk increased from approximately `2.8 GB` to `4.3 GB` (`86%` to `78%` used). V2 data, images, encryption material, Phase C backup, post-cutover backup and final V1 archive were retained.
 - Critical findings: `0`. High findings: `0`. Telegram Hermes real E2E remains `DEFERRED BY PROJECT DECISION`.
 
-Final verdict: `V1 DECOMMISSION COMPLETE` / `HOLYMEDIA MCP V2 FULLY PRODUCTION`.
+Final verdict: `V1 DECOMMISSION COMPLETE` / `HolyPilot V2 FULLY PRODUCTION`.
 
 ## 29. Post-cutover stabilization
 

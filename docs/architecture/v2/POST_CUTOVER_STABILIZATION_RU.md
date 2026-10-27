@@ -1,4 +1,4 @@
-# HolyMedia MCP V2 - Post-Cutover Stabilization
+# HolyPilot V2 - Post-Cutover Stabilization
 
 Date: 2026-08-22/23 UTC
 

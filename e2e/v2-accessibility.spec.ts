@@ -132,7 +132,7 @@ test.describe("axe accessibility", () => {
     await page.getByRole("button", { name: "English" }).click();
     await expect(page.locator("html")).toHaveAttribute("lang", "en");
     await expect(
-      page.getByRole("heading", { name: "HolyMedia MCP Privacy Policy" }),
+      page.getByRole("heading", { name: "HolyPilot Privacy Policy" }),
     ).toBeVisible();
     expect(await page.locator("main").innerText()).not.toMatch(/[А-Яа-яЁё]/);
     await expectAccessible(page, "privacy in English");

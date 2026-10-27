@@ -1,4 +1,4 @@
-# Live VPS commands HolyMedia MCP
+# Live VPS commands HolyPilot
 
 Команды ниже рассчитаны на оператора live beta deploy. Значения `your-domain.com`, `<BETA_TOKEN>` и OAuth placeholders нужно заменить на реальные значения только на VPS. Не вставляйте реальные секреты в Git.
 

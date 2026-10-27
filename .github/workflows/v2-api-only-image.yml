@@ -1,4 +1,4 @@
-name: HolyMedia MCP v2 API-only image
+name: HolyPilot v2 API-only image
 
 on:
   push:

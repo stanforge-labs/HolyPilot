@@ -461,8 +461,8 @@ export default function DashboardPage() {
   useEffect(() => {
     document.title =
       language === "en"
-        ? "HolyMedia MCP — Dashboard"
-        : "HolyMedia MCP — Личный кабинет";
+        ? "HolyPilot — Dashboard"
+        : "HolyPilot — Личный кабинет";
   }, [language, section]);
 
   const [client, setClient] = useState<Client>("codex");
@@ -1526,7 +1526,7 @@ export default function DashboardPage() {
           <a
             className="brand-link"
             href={localizedHref("/dashboard", language)}
-            aria-label="HolyMedia MCP — обзор"
+            aria-label="HolyPilot — обзор"
           >
             <BrandLockup />
           </a>
@@ -1600,7 +1600,7 @@ export default function DashboardPage() {
             className="company-access-gate"
             aria-labelledby="company-access-title"
           >
-            <p className="eyebrow">HOLYMEDIA MCP</p>
+            <p className="eyebrow">HolyPilot</p>
             <h1 id="company-access-title">
               {active.accessStatus === "SUSPENDED"
                 ? "Доступ компании приостановлен"
@@ -1710,7 +1710,7 @@ export default function DashboardPage() {
         {section === "tariffs" && (
           <section className="section" aria-label="Тарифы">
             <h1 className="sr-only">
-              {"\u0422\u0430\u0440\u0438\u0444\u044b HolyMedia MCP"}
+              {"\u0422\u0430\u0440\u0438\u0444\u044b HolyPilot"}
             </h1>
             <TariffCatalog
               subscription={subscription}
@@ -1916,16 +1916,16 @@ export default function DashboardPage() {
             <div className="section-head">
               <div>
                 <p className="eyebrow">AI-клиент</p>
-                <h1 id="mcp-title">Подключите HolyMedia MCP</h1>
+                <h1 id="mcp-title">Подключите HolyPilot</h1>
                 <p className="section-head__sub">
                   {client === "claude" || client === "chatgpt"
                     ? language === "ru"
                       ? `Скопируйте адрес и подключите ${
                           client === "claude" ? "Claude" : "ChatGPT"
-                        } через безопасную авторизацию HolyMedia MCP.`
+                        } через безопасную авторизацию HolyPilot.`
                       : `Copy the URL and connect ${
                           client === "claude" ? "Claude" : "ChatGPT"
-                        } through secure HolyMedia MCP authorization.`
+                        } through secure HolyPilot authorization.`
                     : "Скопируйте адрес, создайте личный ключ и выберите инструкцию."}
                 </p>
               </div>
@@ -2402,7 +2402,7 @@ export default function DashboardPage() {
             <div className="report-layout">
               <section className="panel report-panel report-builder-card">
                 <p className="report-builder-card__eyebrow">
-                  HOLYMEDIA MCP · ОТЧЁТ
+                  HolyPilot · ОТЧЁТ
                 </p>
                 <h2>Собрать отчёт</h2>
                 <p className="report-builder-card__note">
@@ -2627,7 +2627,7 @@ export default function DashboardPage() {
                   <span>{reportFormat.toUpperCase()}</span>
                 </div>
                 <div className="report-preview-card__body">
-                  <span>HOLYMEDIA MCP</span>
+                  <span>HolyPilot</span>
                   <strong>{reportCardCopy.title}</strong>
                   <em>
                     {reportPreview
@@ -3601,13 +3601,13 @@ function OAuthKeyNote({
         <h2>{ru ? "Ключ доступа не требуется" : "No access key required"}</h2>
         <p>
           {ru
-            ? `${clientName} подключается к HolyMedia MCP через безопасную OAuth-авторизацию. Создавать и копировать MCP-ключ для ${clientName} не нужно.`
-            : `${clientName} connects to HolyMedia MCP through secure OAuth authorization. You do not need to create or copy an MCP key for ${clientName}.`}
+            ? `${clientName} подключается к HolyPilot через безопасную OAuth-авторизацию. Создавать и копировать MCP-ключ для ${clientName} не нужно.`
+            : `${clientName} connects to HolyPilot through secure OAuth authorization. You do not need to create or copy an MCP key for ${clientName}.`}
         </p>
         <small>
           {ru
-            ? `После создания подключения ${clientName} откроет страницу HolyMedia MCP для входа и подтверждения доступа.`
-            : `After adding the connector, ${clientName} opens HolyMedia MCP so you can sign in and approve access.`}
+            ? `После создания подключения ${clientName} откроет страницу HolyPilot для входа и подтверждения доступа.`
+            : `After adding the connector, ${clientName} opens HolyPilot so you can sign in and approve access.`}
         </small>
       </div>
     </div>
@@ -3666,14 +3666,14 @@ function ClaudeInstructions({
         <li>
           <strong>
             {ru
-              ? "Заполните данные HolyMedia MCP"
-              : "Enter the HolyMedia MCP details"}
+              ? "Заполните данные HolyPilot"
+              : "Enter the HolyPilot details"}
           </strong>
           <dl className="codex-config oauth-config">
             <div>
               <dt>Name</dt>
               <dd>
-                <code>HolyMedia MCP</code>
+                <code>HolyPilot</code>
               </dd>
             </div>
             <div>
@@ -3713,22 +3713,22 @@ function ClaudeInstructions({
         </li>
         <li>
           <strong>
-            {ru ? "Подключите HolyMedia MCP" : "Connect HolyMedia MCP"}
+            {ru ? "Подключите HolyPilot" : "Connect HolyPilot"}
           </strong>
           <span>
             {ru
-              ? "После добавления HolyMedia MCP нажмите Connect."
-              : "After adding HolyMedia MCP, select Connect."}
+              ? "После добавления HolyPilot нажмите Connect."
+              : "After adding HolyPilot, select Connect."}
           </span>
         </li>
         <li>
           <strong>
-            {ru ? "Войдите в HolyMedia MCP" : "Sign in to HolyMedia MCP"}
+            {ru ? "Войдите в HolyPilot" : "Sign in to HolyPilot"}
           </strong>
           <span>
             {ru
-              ? "Claude откроет страницу HolyMedia MCP в браузере. Войдите в свой аккаунт."
-              : "Claude opens HolyMedia MCP in your browser. Sign in to your account."}
+              ? "Claude откроет страницу HolyPilot в браузере. Войдите в свой аккаунт."
+              : "Claude opens HolyPilot in your browser. Sign in to your account."}
           </span>
         </li>
         <li>
@@ -3742,16 +3742,16 @@ function ClaudeInstructions({
           </span>
           <small>
             {ru
-              ? "Claude получит доступ только к данным вашей текущей компании и подключённым в HolyMedia MCP рекламным кабинетам."
-              : "Claude receives access only to your current company and its advertising accounts connected in HolyMedia MCP."}
+              ? "Claude получит доступ только к данным вашей текущей компании и подключённым в HolyPilot рекламным кабинетам."
+              : "Claude receives access only to your current company and its advertising accounts connected in HolyPilot."}
           </small>
         </li>
         <li>
           <strong>{ru ? "Вернитесь в Claude" : "Return to Claude"}</strong>
           <span>
             {ru
-              ? "После успешной авторизации вернитесь в Claude. HolyMedia MCP должен отображаться со статусом Connected."
-              : "After authorization, return to Claude. HolyMedia MCP should show the Connected status."}
+              ? "После успешной авторизации вернитесь в Claude. HolyPilot должен отображаться со статусом Connected."
+              : "After authorization, return to Claude. HolyPilot should show the Connected status."}
           </span>
         </li>
         <li>
@@ -3782,8 +3782,8 @@ function ClaudeInstructions({
         </strong>
         <p>
           {ru
-            ? "Для Claude MCP-ключ не используется. Не создавайте отдельный ключ в разделе «AI-клиент» специально для Claude — авторизация выполняется через ваш аккаунт HolyMedia MCP."
-            : "Claude does not use an MCP key. Do not create a separate AI client key for Claude — authorization uses your HolyMedia MCP account."}
+            ? "Для Claude MCP-ключ не используется. Не создавайте отдельный ключ в разделе «AI-клиент» специально для Claude — авторизация выполняется через ваш аккаунт HolyPilot."
+            : "Claude does not use an MCP key. Do not create a separate AI client key for Claude — authorization uses your HolyPilot account."}
         </p>
       </aside>
 
@@ -3815,8 +3815,8 @@ function ClaudeInstructions({
             </dt>
             <dd>
               {ru
-                ? "Нажмите Connect и войдите в HolyMedia MCP."
-                : "Select Connect and sign in to HolyMedia MCP."}
+                ? "Нажмите Connect и войдите в HolyPilot."
+                : "Select Connect and sign in to HolyPilot."}
             </dd>
           </div>
           <div>
@@ -3827,8 +3827,8 @@ function ClaudeInstructions({
             </dt>
             <dd>
               {ru
-                ? "Откройте HolyMedia MCP → Подключения и убедитесь, что нужная рекламная платформа и кабинеты подключены."
-                : "Open HolyMedia MCP → Connections and confirm that the required platform and accounts are connected."}
+                ? "Откройте HolyPilot → Подключения и убедитесь, что нужная рекламная платформа и кабинеты подключены."
+                : "Open HolyPilot → Connections and confirm that the required platform and accounts are connected."}
             </dd>
           </div>
           <div>
@@ -3911,22 +3911,22 @@ function ChatGPTInstructions({
         <li>
           <strong>
             {ru
-              ? "Заполните данные HolyMedia MCP"
-              : "Enter the HolyMedia MCP details"}
+              ? "Заполните данные HolyPilot"
+              : "Enter the HolyPilot details"}
           </strong>
           <dl className="codex-config oauth-config">
             <div>
               <dt>{ru ? "Название" : "Name"}</dt>
               <dd>
-                <code>HolyMedia MCP</code>
+                <code>HolyPilot</code>
               </dd>
             </div>
             <div>
               <dt>{ru ? "Описание" : "Description"}</dt>
               <dd>
                 {ru
-                  ? "Работа с подключёнными рекламными кабинетами через HolyMedia MCP"
-                  : "Work with connected advertising accounts through HolyMedia MCP"}
+                  ? "Работа с подключёнными рекламными кабинетами через HolyPilot"
+                  : "Work with connected advertising accounts through HolyPilot"}
               </dd>
             </div>
             <div>
@@ -3967,20 +3967,20 @@ function ChatGPTInstructions({
           </span>
           <small>
             {ru
-              ? "ChatGPT автоматически определит параметры OAuth HolyMedia MCP. Расширенные настройки менять не нужно."
-              : "ChatGPT automatically discovers HolyMedia MCP OAuth settings. You do not need to change advanced settings."}
+              ? "ChatGPT автоматически определит параметры OAuth HolyPilot. Расширенные настройки менять не нужно."
+              : "ChatGPT automatically discovers HolyPilot OAuth settings. You do not need to change advanced settings."}
           </small>
         </li>
         <li>
           <strong>
             {ru
-              ? "Войдите через HolyMedia MCP"
-              : "Sign in through HolyMedia MCP"}
+              ? "Войдите через HolyPilot"
+              : "Sign in through HolyPilot"}
           </strong>
           <span>
             {ru
-              ? "После создания нажмите «Войти через HolyMedia MCP». ChatGPT откроет страницу HolyMedia MCP в браузере."
-              : "After creating it, select “Sign in through HolyMedia MCP”. ChatGPT opens HolyMedia MCP in your browser."}
+              ? "После создания нажмите «Войти через HolyPilot». ChatGPT откроет страницу HolyPilot в браузере."
+              : "After creating it, select “Sign in through HolyPilot”. ChatGPT opens HolyPilot in your browser."}
           </span>
         </li>
         <li>
@@ -3989,8 +3989,8 @@ function ChatGPTInstructions({
           </strong>
           <span>
             {ru
-              ? "Войдите в свой аккаунт HolyMedia MCP, если вы ещё не авторизованы. При активной сессии этот шаг пропустится автоматически."
-              : "Sign in to your HolyMedia MCP account if needed. An active session continues automatically."}
+              ? "Войдите в свой аккаунт HolyPilot, если вы ещё не авторизованы. При активной сессии этот шаг пропустится автоматически."
+              : "Sign in to your HolyPilot account if needed. An active session continues automatically."}
           </span>
         </li>
         <li>
@@ -4004,24 +4004,24 @@ function ChatGPTInstructions({
           </span>
           <small>
             {ru
-              ? "ChatGPT получит доступ только к данным вашей текущей компании и подключённым в HolyMedia MCP рекламным кабинетам."
-              : "ChatGPT receives access only to your current company and its advertising accounts connected in HolyMedia MCP."}
+              ? "ChatGPT получит доступ только к данным вашей текущей компании и подключённым в HolyPilot рекламным кабинетам."
+              : "ChatGPT receives access only to your current company and its advertising accounts connected in HolyPilot."}
           </small>
         </li>
         <li>
           <strong>{ru ? "Вернитесь в ChatGPT" : "Return to ChatGPT"}</strong>
           <span>
             {ru
-              ? "После успешной авторизации вернитесь в ChatGPT. HolyMedia MCP должен отображаться как подключённый плагин."
-              : "After authorization, return to ChatGPT. HolyMedia MCP should appear as a connected plugin."}
+              ? "После успешной авторизации вернитесь в ChatGPT. HolyPilot должен отображаться как подключённый плагин."
+              : "After authorization, return to ChatGPT. HolyPilot should appear as a connected plugin."}
           </span>
         </li>
         <li>
           <strong>{ru ? "Проверьте работу" : "Verify the connection"}</strong>
           <span>
             {ru
-              ? "Откройте новый чат ChatGPT и включите HolyMedia MCP, если он не активирован автоматически."
-              : "Open a new ChatGPT chat and enable HolyMedia MCP if it is not active automatically."}
+              ? "Откройте новый чат ChatGPT и включите HolyPilot, если он не активирован автоматически."
+              : "Open a new ChatGPT chat and enable HolyPilot if it is not active automatically."}
           </span>
           <div className="oauth-prompts">
             <code>
@@ -4052,8 +4052,8 @@ function ChatGPTInstructions({
         </strong>
         <p>
           {ru
-            ? "Для ChatGPT MCP-ключ не используется. Не создавайте отдельный ключ в разделе «AI-клиент» специально для ChatGPT — авторизация выполняется через ваш аккаунт HolyMedia MCP."
-            : "ChatGPT does not use an MCP key. Do not create a separate AI client key for ChatGPT — authorization uses your HolyMedia MCP account."}
+            ? "Для ChatGPT MCP-ключ не используется. Не создавайте отдельный ключ в разделе «AI-клиент» специально для ChatGPT — авторизация выполняется через ваш аккаунт HolyPilot."
+            : "ChatGPT does not use an MCP key. Do not create a separate AI client key for ChatGPT — authorization uses your HolyPilot account."}
         </p>
         <p>
           {ru
@@ -4090,8 +4090,8 @@ function ChatGPTInstructions({
             </dt>
             <dd>
               {ru
-                ? "Откройте HolyMedia MCP в списке подключённых плагинов и нажмите «Войти через HolyMedia MCP» или «Подключить»."
-                : "Open HolyMedia MCP in the connected plugins list and select “Sign in through HolyMedia MCP” or Connect."}
+                ? "Откройте HolyPilot в списке подключённых плагинов и нажмите «Войти через HolyPilot» или «Подключить»."
+                : "Open HolyPilot in the connected plugins list and select “Sign in through HolyPilot” or Connect."}
             </dd>
           </div>
           <div>
@@ -4102,8 +4102,8 @@ function ChatGPTInstructions({
             </dt>
             <dd>
               {ru
-                ? "Откройте HolyMedia MCP → Подключения и убедитесь, что нужная рекламная платформа и кабинеты подключены."
-                : "Open HolyMedia MCP → Connections and confirm that the required platform and accounts are connected."}
+                ? "Откройте HolyPilot → Подключения и убедитесь, что нужная рекламная платформа и кабинеты подключены."
+                : "Open HolyPilot → Connections and confirm that the required platform and accounts are connected."}
             </dd>
           </div>
           <div>
@@ -4143,8 +4143,8 @@ function CodexInstructions({ language }: { language: "ru" | "en" }) {
       <h3>Codex</h3>
       <p className="client-panel__intro">
         {ru
-          ? "Подключение выполняется только в HolyMedia MCP и настройках Codex — без терминала и переменных среды."
-          : "Set up the connection entirely in HolyMedia MCP and Codex settings — no terminal or environment variables required."}
+          ? "Подключение выполняется только в HolyPilot и настройках Codex — без терминала и переменных среды."
+          : "Set up the connection entirely in HolyPilot and Codex settings — no terminal or environment variables required."}
       </p>
       <ol className="codex-steps">
         <li>
@@ -4193,7 +4193,7 @@ function CodexInstructions({ language }: { language: "ru" | "en" }) {
             <div>
               <dt>{ru ? "Имя" : "Name"}</dt>
               <dd>
-                <code>HolyMedia MCP</code>
+                <code>HolyPilot</code>
               </dd>
             </div>
             <div>
@@ -4256,8 +4256,8 @@ function CodexInstructions({ language }: { language: "ru" | "en" }) {
           </strong>
           <span>
             {ru
-              ? "В списке MCP найдите HolyMedia MCP и включите переключатель справа, если он выключен."
-              : "Find HolyMedia MCP in the MCP list and turn on its switch if needed."}
+              ? "В списке MCP найдите HolyPilot и включите переключатель справа, если он выключен."
+              : "Find HolyPilot in the MCP list and turn on its switch if needed."}
           </span>
         </li>
         <li>

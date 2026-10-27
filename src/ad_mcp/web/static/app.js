@@ -31,7 +31,7 @@
   window.setTimeout(hideLoader, 2200); // anti-hang hard cap
 })();
 
-/* HolyMedia MCP dashboard.
+/* HolyPilot dashboard.
    Onboarding flow: access code gate -> onboarding -> connections -> MCP setup.
    Uses only existing hosted/diagnostics endpoints. Never renders the access code
    or provider secrets. */
@@ -236,7 +236,7 @@
       }
       showLanding();
       openAuth("login");
-      showAuthError("Войдите в HolyMedia MCP, чтобы разрешить подключение AI-клиента.");
+      showAuthError("Войдите в HolyPilot, чтобы разрешить подключение AI-клиента.");
       return;
     }
     if (window.location.pathname === "/admin") {
@@ -534,7 +534,7 @@
     el.authForm.hidden = false;
     el.authSuccess.hidden = true;
     resetPasswordVisibility();
-    el.authTitle.textContent = isRegister ? "Создать аккаунт" : "Войти в HolyMedia MCP";
+    el.authTitle.textContent = isRegister ? "Создать аккаунт" : "Войти в HolyPilot";
     el.authSubtitle.textContent = isRegister
       ? "Аккаунт нужен, чтобы подключить рекламные кабинеты и открыть их вашему AI-клиенту."
       : "Введите email и пароль, чтобы открыть личный кабинет.";
@@ -564,7 +564,7 @@
   function showRegistrationSuccess() {
     hideAuthError();
     el.authTitle.textContent = "Аккаунт создан";
-    el.authSubtitle.textContent = "Добро пожаловать в HolyMedia MCP.";
+    el.authSubtitle.textContent = "Добро пожаловать в HolyPilot.";
     el.authForm.hidden = true;
     el.authSuccess.hidden = false;
     el.authSuccessApp.focus();
@@ -597,7 +597,7 @@
   function showForgotPasswordModal() {
     showClientModal({
       title: "Восстановление пароля",
-      subtitle: "Введите email, который привязан к аккаунту HolyMedia MCP.",
+      subtitle: "Введите email, который привязан к аккаунту HolyPilot.",
       body: `
         <form id="forgot-password-form" class="auth-form">
           <label class="field">
@@ -633,7 +633,7 @@
   function showResetPasswordModal(token) {
     showClientModal({
       title: "Новый пароль",
-      subtitle: "Введите новый пароль для аккаунта HolyMedia MCP.",
+      subtitle: "Введите новый пароль для аккаунта HolyPilot.",
       body: `
         <form id="reset-password-form" class="auth-form">
           <input name="token" type="hidden" value="${escAttr(token)}">
@@ -781,7 +781,7 @@
       if (!url || url === "—") return;
       await copyText(url);
       markMcpUrlCopied();
-      showClientMessage("Адрес подключения скопирован", "Вставьте этот URL при добавлении HolyMedia MCP в Codex, Claude или ChatGPT.", "success");
+      showClientMessage("Адрес подключения скопирован", "Вставьте этот URL при добавлении HolyPilot в Codex, Claude или ChatGPT.", "success");
     });
     el.copyMcpToken.addEventListener("click", async () => {
       const token = el.mcpTokenRaw.textContent.trim();
@@ -901,7 +901,7 @@
   function showWelcomeModal(kind) {
     const isRegister = kind === "register";
     showClientModal({
-      title: isRegister ? "Добро пожаловать в HolyMedia MCP" : "С возвращением",
+      title: isRegister ? "Добро пожаловать в HolyPilot" : "С возвращением",
       subtitle: isRegister
         ? "Три шага, и ваш AI-клиент начнёт отвечать на вопросы о рекламе."
         : "Кабинет готов к работе.",
@@ -910,7 +910,7 @@
         <ol class="welcome-steps">
           <li><span><strong>Подключите платформу</strong> — Meta, Google, TikTok или Яндекс Директ.</span></li>
           <li><span><strong>Выберите рекламные аккаунты</strong>, с которыми будет работать AI.</span></li>
-          <li><span><strong>Добавьте HolyMedia MCP в AI-клиент</strong> — Claude, ChatGPT или Codex.</span></li>
+          <li><span><strong>Добавьте HolyPilot в AI-клиент</strong> — Claude, ChatGPT или Codex.</span></li>
         </ol>
       `
         : "",
@@ -1016,7 +1016,7 @@
         <div class="kv-row"><span>Создан</span><strong>${esc(formatTime(token?.created_at))}</strong></div>
         <div class="kv-row"><span>Последнее использование</span><strong>${esc(formatTime(token?.last_used_at))}</strong></div>
       </div>
-      <span>Этот ключ нужен AI-клиенту, чтобы безопасно подключиться к вашему HolyMedia MCP. Полный ключ показывается только после создания или обновления.</span>
+      <span>Этот ключ нужен AI-клиенту, чтобы безопасно подключиться к вашему HolyPilot. Полный ключ показывается только после создания или обновления.</span>
     `;
     el.mcpTokenActions.innerHTML = active
       ? `
@@ -2082,7 +2082,7 @@
       ["Desktop", desktopShot],
       ["Mobile", mobileShot],
     ].filter(([, item]) => item.captured && item.preview_data_url).map(([label, item]) => `<div class="shot"><img src="${escAttr(item.preview_data_url)}" alt="${escAttr(label)} screenshot"><p><strong>${esc(label)}</strong> · ${esc(String(item.viewport?.width || ""))}x${esc(String(item.viewport?.height || ""))}</p></div>`).join("");
-    return `<!doctype html><html><head><meta charset="utf-8"><title>HolyMedia MCP — аудит сайта</title>
+    return `<!doctype html><html><head><meta charset="utf-8"><title>HolyPilot — аудит сайта</title>
       <style>
         @page{margin:22mm 18mm}
         :root{
@@ -2117,7 +2117,7 @@
       </style>
       </head><body>
       <header class="doc-header">
-        <strong>HolyMedia MCP</strong>
+        <strong>HolyPilot</strong>
         <span>Отчёт подготовлен ${esc(new Date().toLocaleDateString())}</span>
       </header>
       <section class="cover">
@@ -2171,7 +2171,7 @@
       <h2>План внедрения</h2><table><tr><th>Задача</th><th>Влияние</th><th>Сложность</th><th>Приоритет</th><th>Ответственный</th></tr>${planRows}</table>
       <h2>Вопросы для уточнения</h2><ol>${(analysis.questions || []).map((x) => `<li>${esc(x)}</li>`).join("")}</ol>
       <footer class="doc-footer">
-        <span>HolyMedia MCP · hello@holymedia.kz</span>
+        <span>HolyPilot · hello@holymedia.kz</span>
         <span>Отчёт для внутреннего и клиентского использования</span>
       </footer>
       </body></html>`;
@@ -2647,7 +2647,7 @@
     const range = report.date_range || {};
     const title = `SEO-отчет: ${seoSelectedTitle(report.selected_property)}`;
     const lines = [
-      rtfHeading("HolyMedia MCP", 20),
+      rtfHeading("HolyPilot", 20),
       rtfHeading(title, 32),
       rtfParagraph(`Период: ${range.start_date || ""} - ${range.end_date || ""}. Источник: Google Search Console. Только просмотр, без изменений.`),
       rtfHeading("Ключевые метрики", 24),
@@ -2662,7 +2662,7 @@
       rtfPlainTable(report.top_pages || [], "page"),
       rtfHeading("Запросы для роста", 24),
       rtfPlainTable(report.opportunities || [], "query"),
-      rtfParagraph(`\\par HolyMedia MCP \\emdash отчёт подготовлен ${new Date().toLocaleDateString()}`),
+      rtfParagraph(`\\par HolyPilot \\emdash отчёт подготовлен ${new Date().toLocaleDateString()}`),
     ];
     return `{\\rtf1\\ansi\\deff0{\\fonttbl{\\f0 Manrope;}{\\f1 Arial;}}\\fs22\\f1\\paperw11907\\paperh16840\\margl1134\\margr1134\\margt1134\\margb1134\n${lines.join("\\par\n")}\n}`;
   }
@@ -3054,7 +3054,7 @@
     showClientModal({
       title: accounts.length ? "Выберите рекламный аккаунт" : manualGoogle ? "Введите Google Ads Customer ID" : "Аккаунты не найдены",
       subtitle: accounts.length
-        ? "Мы получили доступ к вашему рекламному кабинету. Выберите аккаунт, который нужно подключить к HolyMedia MCP."
+        ? "Мы получили доступ к вашему рекламному кабинету. Выберите аккаунт, который нужно подключить к HolyPilot."
         : manualGoogle
         ? "Google OAuth прошёл. Если API не вернул список кабинетов автоматически, введите Customer ID вручную."
         : "Проверьте, что у пользователя есть доступ к рекламному кабинету.",
@@ -3274,7 +3274,7 @@
       closeClientModal();
       state.notice = { tone: "success", text: "Аккаунты подключены. Теперь их можно использовать в AI-клиенте." };
       await loadConnections();
-      showClientMessage("Аккаунт подключён", "Теперь HolyMedia MCP сможет использовать выбранные рекламные аккаунты в AI-клиенте.", "success");
+      showClientMessage("Аккаунт подключён", "Теперь HolyPilot сможет использовать выбранные рекламные аккаунты в AI-клиенте.", "success");
     } catch (error) {
       if (handle401(error)) return;
       setLoading(button, false);

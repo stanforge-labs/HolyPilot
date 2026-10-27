@@ -1,8 +1,8 @@
-# End-to-end beta validation HolyMedia MCP
+# End-to-end beta validation HolyPilot
 
 Этот документ нужен для полной проверки hosted beta перед демонстрацией или передачей первому beta-пользователю.
 
-Главная модель остается прежней: клиент не скачивает GitHub-репозиторий и не запускает MCP локально. Оператор разворачивает HolyMedia MCP на VPS/WPS, клиент открывает dashboard, подключает рекламные кабинеты через OAuth и добавляет hosted MCP URL в Codex, Claude или другой MCP-compatible клиент.
+Главная модель остается прежней: клиент не скачивает GitHub-репозиторий и не запускает MCP локально. Оператор разворачивает HolyPilot на VPS/WPS, клиент открывает dashboard, подключает рекламные кабинеты через OAuth и добавляет hosted MCP URL в Codex, Claude или другой MCP-compatible клиент.
 
 ## 1. Предварительные условия
 
@@ -165,13 +165,13 @@ Yandex Direct:
 
 В Codex, Claude или другом клиенте добавить:
 
-- Name: `HolyMedia MCP`;
+- Name: `HolyPilot`;
 - URL: `https://your-domain.com/mcp`;
 - Auth: `Authorization: Bearer <BETA_TOKEN>`.
 
 Проверочные запросы:
 
-- `Проверь диагностику HolyMedia MCP`;
+- `Проверь диагностику HolyPilot`;
 - `Покажи подключенные рекламные аккаунты`;
 - `Покажи кампании Meta Ads`;
 - `Покажи кампании Google Ads за последние 7 дней`;

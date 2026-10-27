@@ -8,18 +8,18 @@ export function SupportContent() {
   const copy =
     language === "ru"
       ? {
-          title: "Поддержка HolyMedia MCP",
+          title: "Поддержка HolyPilot",
           intro:
-            "HolyMedia MCP позволяет подключать рекламные и аналитические источники к AI-клиентам для анализа данных и подготовки отчётов.",
+            "HolyPilot позволяет подключать рекламные и аналитические источники к AI-клиентам для анализа данных и подготовки отчётов.",
           help: "Как получить помощь",
           helpText:
             "Напишите, с какой платформой и AI-клиентом вы работаете, что хотели сделать и какое сообщение об ошибке получили. Укажите время возникновения проблемы.",
           connections: "Проблемы с подключением",
           connectionsText:
-            "Проверьте, что источник подключён в HolyMedia MCP и нужный рекламный кабинет или ресурс доступен вашему аккаунту. Если подключение истекло, повторите авторизацию в разделе подключений.",
+            "Проверьте, что источник подключён в HolyPilot и нужный рекламный кабинет или ресурс доступен вашему аккаунту. Если подключение истекло, повторите авторизацию в разделе подключений.",
           access: "Доступ к данным и OAuth",
           accessText:
-            "HolyMedia MCP работает только с ресурсами, к которым у вашей компании есть доступ. Первая публичная версия предоставляет чтение данных; изменение рекламных кампаний недоступно. Подключение можно отключить в HolyMedia MCP или отозвать доступ в настройках соответствующей платформы.",
+            "HolyPilot работает только с ресурсами, к которым у вашей компании есть доступ. Первая публичная версия предоставляет чтение данных; изменение рекламных кампаний недоступно. Подключение можно отключить в HolyPilot или отозвать доступ в настройках соответствующей платформы.",
           security: "Безопасность и конфиденциальность",
           securityText:
             "Не отправляйте в поддержку пароли, токены, ключи доступа или коды авторизации. Перед отправкой сообщения или снимка экрана удалите секреты и лишние персональные данные.",
@@ -30,18 +30,18 @@ export function SupportContent() {
             "По вопросам сервиса, подключённых платформ и обработки данных:",
         }
       : {
-          title: "HolyMedia MCP Support",
+          title: "HolyPilot Support",
           intro:
-            "HolyMedia MCP connects advertising and analytics sources to AI clients for data analysis and reporting.",
+            "HolyPilot connects advertising and analytics sources to AI clients for data analysis and reporting.",
           help: "How to get help",
           helpText:
             "Tell us which platform and AI client you use, what you were trying to do, and the error message you received. Include when the problem occurred.",
           connections: "Connection problems",
           connectionsText:
-            "Check that the source is connected in HolyMedia MCP and that your account can access the required advertising account or resource. If the connection has expired, authorize it again in the connections section.",
+            "Check that the source is connected in HolyPilot and that your account can access the required advertising account or resource. If the connection has expired, authorize it again in the connections section.",
           access: "Data access and OAuth",
           accessText:
-            "HolyMedia MCP works only with resources available to your company. The first public release provides read access; changing advertising campaigns is unavailable. You can disconnect a source in HolyMedia MCP or revoke access in the platform's settings.",
+            "HolyPilot works only with resources available to your company. The first public release provides read access; changing advertising campaigns is unavailable. You can disconnect a source in HolyPilot or revoke access in the platform's settings.",
           security: "Security and privacy",
           securityText:
             "Do not send passwords, tokens, access keys, or authorization codes to support. Remove secrets and unnecessary personal data from messages and screenshots before sending them.",

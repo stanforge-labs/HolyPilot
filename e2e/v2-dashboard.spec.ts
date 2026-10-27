@@ -192,7 +192,7 @@ test.describe("restored HolyMedia client UX", () => {
     await expect(accessKeys).toContainText("активных ключей");
     await accessKeys.click();
     await expect(
-      page.getByRole("heading", { name: "Подключите HolyMedia MCP" }),
+      page.getByRole("heading", { name: "Подключите HolyPilot" }),
     ).toBeVisible();
 
     await page.getByRole("button", { name: "Обзор", exact: true }).click();
@@ -202,7 +202,7 @@ test.describe("restored HolyMedia client UX", () => {
     await expect(tariff).toContainText("Не определён");
     await tariff.click();
     await expect(
-      page.getByRole("heading", { name: "Тарифы HolyMedia MCP" }),
+      page.getByRole("heading", { name: "Тарифы HolyPilot" }),
     ).toBeVisible();
   });
 
@@ -460,7 +460,7 @@ test.describe("restored HolyMedia client UX", () => {
       "Просмотреть плагины",
     );
     await expect(page.getByRole("tabpanel")).toContainText(
-      "Войти через HolyMedia MCP",
+      "Войти через HolyPilot",
     );
     await expect(page.getByRole("tabpanel")).toContainText(
       "Расширенные настройки OAuth",
@@ -737,7 +737,7 @@ test.describe("restored HolyMedia client UX", () => {
     await expect(page.locator("form.token-form")).toHaveCount(0);
     await expect(panel).toContainText("Настройки");
     await expect(panel).toContainText("Просмотреть плагины");
-    await expect(panel).toContainText("Войти через HolyMedia MCP");
+    await expect(panel).toContainText("Войти через HolyPilot");
     await expect(panel).toContainText("Расширенные настройки OAuth");
     await expect(panel).toContainText("Покажи расходы за последние 7 дней.");
     await expect(

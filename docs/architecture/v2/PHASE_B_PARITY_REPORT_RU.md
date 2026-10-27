@@ -1,4 +1,4 @@
-# HolyMedia MCP V1 → V2: Phase B parity report
+# HolyPilot V1 → V2: Phase B parity report
 
 Статус этого документа — рабочая сверка перед migration rehearsal. `LIVE_READ_VERIFIED` и `E2E_VERIFIED` нельзя выставлять по fixture-тесту: для них нужен отдельный защищённый запуск на том же provider connection и периоде.
 

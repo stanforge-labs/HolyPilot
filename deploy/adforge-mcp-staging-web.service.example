@@ -1,5 +1,5 @@
 [Unit]
-Description=HolyMedia MCP staging web dashboard and API
+Description=HolyPilot staging web dashboard and API
 After=network.target
 
 [Service]

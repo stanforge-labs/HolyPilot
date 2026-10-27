@@ -1,4 +1,4 @@
-name: HolyMedia MCP v2 full-stack Compose smoke
+name: HolyPilot v2 full-stack Compose smoke
 
 on:
   push:

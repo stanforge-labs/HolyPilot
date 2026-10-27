@@ -1,4 +1,4 @@
-# Go/no-go для hosted beta HolyMedia MCP
+# Go/no-go для hosted beta HolyPilot
 
 Этот документ помогает принять решение: можно ли выпускать текущую hosted beta ограниченному пользователю или нужно остановиться.
 

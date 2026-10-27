@@ -164,7 +164,7 @@ export class ServiceTokenService {
         data: {
           workspaceId,
           createdById: principal.userId,
-          name: `HolyMedia MCP: ${input.name}`,
+          name: `HolyPilot: ${input.name}`,
         },
       });
       const token = await tx.serviceToken.create({

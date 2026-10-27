@@ -94,7 +94,7 @@ def test_favicon_svg_is_publicly_served(tmp_path) -> None:
 
     assert response.status == 200
     assert "image/svg+xml" in content_type
-    assert "HolyMedia MCP" in body
+    assert "HolyPilot" in body
 
 
 def test_favicon_png_is_publicly_served(tmp_path) -> None:
@@ -820,10 +820,10 @@ def test_legal_pages_are_public_and_linked_from_landing(tmp_path) -> None:
     assert landing_status == privacy_status == terms_status == 200
     assert "/privacy" in landing
     assert "/terms" in landing
-    assert "Политика конфиденциальности HolyMedia MCP" in privacy
+    assert "Политика конфиденциальности HolyPilot" in privacy
     assert "Google Ads" in privacy
     assert "Meta Ads" in privacy
-    assert "Условия использования HolyMedia MCP" in terms
+    assert "Условия использования HolyPilot" in terms
     assert "Google Ads" in terms
     assert "Meta Ads" in terms
     assert privacy_head_status == terms_head_status == 200

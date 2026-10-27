@@ -1,4 +1,4 @@
-# Live beta status HolyMedia MCP
+# Live beta status HolyPilot
 
 Дата обновления: 2026-06-12 (вечерняя сессия, проверки выполнены напрямую на VPS).
 
@@ -93,7 +93,7 @@ Journal logs (`adforge-mcp-web`, `adforge-mcp-http`, последние 300 ст
 - инвалидировать/перевыпустить access tokens;
 - удалить `.env` из tracked файлов репозитория (`git rm --cached .env`, добавить в `.gitignore`) и почистить историю при необходимости.
 
-Репозиторий **HolyMedia MCP** секреты НЕ трекает (`git ls-files` чисто) — проблема только в legacy `mcp-for-ads`.
+Репозиторий **HolyPilot** секреты НЕ трекает (`git ls-files` чисто) — проблема только в legacy `mcp-for-ads`.
 
 ## OAuth authorize-url status
 

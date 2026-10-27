@@ -49,7 +49,7 @@
 
 ## C. MCP client
 
-- Codex видит HolyMedia MCP server.
+- Codex видит HolyPilot server.
 - Claude видит HolyMedia custom connector.
 - Tools отображаются в MCP client.
 - `run_diagnostics` работает.
@@ -93,7 +93,7 @@
 7. Запустить `Run diagnostics` на платформе.
 8. Открыть Codex или Claude.
 9. Добавить hosted MCP URL и beta token.
-10. Спросить: `Проверь диагностику HolyMedia MCP`.
+10. Спросить: `Проверь диагностику HolyPilot`.
 11. Спросить: `Покажи подключенные рекламные аккаунты`.
 12. Спросить: `Покажи кампании Meta Ads`.
 13. Спросить: `Покажи базовые метрики за последние 7 дней`.

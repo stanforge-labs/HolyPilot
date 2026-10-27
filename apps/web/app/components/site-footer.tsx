@@ -3,6 +3,7 @@
 import Link from "./locale-link";
 import { useLanguage } from "./language-switcher";
 import { LandingBrandLockup } from "./landing-brand-lockup";
+import { BrandLockup } from "./brand-lockup";
 
 export function SiteFooter({
   compact = false,
@@ -39,18 +40,7 @@ export function SiteFooter({
           {holyPilot ? (
             <LandingBrandLockup footer />
           ) : (
-            <>
-              <img
-                className="footer__brand-logo footer__brand-logo--dark"
-                src="/assets/brand/holymedia-mcp-horizontal-dark.svg"
-                alt="HolyMedia MCP"
-              />
-              <img
-                className="footer__brand-logo footer__brand-logo--light"
-                src="/assets/brand/holymedia-mcp-horizontal.svg"
-                alt="HolyMedia MCP"
-              />
-            </>
+            <BrandLockup />
           )}
         </div>
         <a

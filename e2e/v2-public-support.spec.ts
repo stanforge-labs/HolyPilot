@@ -4,7 +4,7 @@ import AxeBuilder from "@axe-core/playwright";
 for (const locale of ["ru", "en"] as const) {
   const path = locale === "ru" ? "/support" : "/en/support";
   const title =
-    locale === "ru" ? "Поддержка HolyMedia MCP" : "HolyMedia MCP Support";
+    locale === "ru" ? "Поддержка HolyPilot" : "HolyPilot Support";
 
   test(`public support page and legal links work in ${locale}`, async ({
     page,
@@ -22,7 +22,7 @@ for (const locale of ["ru", "en"] as const) {
     await expect(page.locator("html")).toHaveAttribute("lang", locale);
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(title);
     await expect(page).toHaveTitle(
-      locale === "ru" ? `${title} | HolyMedia MCP` : title,
+      locale === "ru" ? `${title} | HolyPilot` : title,
     );
     await expect(page.locator('link[rel="canonical"]')).toHaveAttribute(
       "href",

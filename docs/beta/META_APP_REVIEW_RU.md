@@ -1,4 +1,4 @@
-# Meta App Review: staging-проверка HolyMedia MCP
+# Meta App Review: staging-проверка HolyPilot
 
 Документ описывает проверяемые read-сценарии и отдельный низкорисковый write-сценарий. Production не включается этим runbook: `AD_MCP_PREVIEW_ONLY=true` остаётся обязательным, а `commit_preview` всегда блокирует внешние изменения.
 

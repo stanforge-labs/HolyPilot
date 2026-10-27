@@ -1,6 +1,6 @@
 # Storage and backup
 
-В beta HolyMedia MCP хранит OAuth-подключения в JSON storage:
+В beta HolyPilot хранит OAuth-подключения в JSON storage:
 
 ```text
 /var/lib/adforge-mcp/connections.json

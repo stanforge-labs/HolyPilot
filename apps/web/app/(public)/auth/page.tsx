@@ -20,7 +20,7 @@ const copy = {
     signupTitle: "Новый аккаунт",
     forgotTitle: "Восстановление пароля",
     signInLead: "Войдите, чтобы открыть рекламные кабинеты.",
-    signupLead: "Создайте аккаунт HolyMedia MCP.",
+    signupLead: "Создайте аккаунт HolyPilot.",
     forgotLead: "Укажите email, который использовали при регистрации.",
     google: "Войти через Google",
     name: "Имя",
@@ -51,7 +51,7 @@ const copy = {
     signupTitle: "Create your account",
     forgotTitle: "Reset your password",
     signInLead: "Sign in to open your advertising accounts.",
-    signupLead: "Create your HolyMedia MCP account.",
+    signupLead: "Create your HolyPilot account.",
     forgotLead: "Enter the email you used to register.",
     google: "Continue with Google",
     name: "Name",
@@ -159,15 +159,15 @@ export default function AuthPage() {
     document.title =
       mode === "signup"
         ? language === "ru"
-          ? "Регистрация — HolyMedia MCP"
-          : "Create account — HolyMedia MCP"
+          ? "Регистрация — HolyPilot"
+          : "Create account — HolyPilot"
         : mode === "login"
           ? language === "ru"
-            ? "Вход — HolyMedia MCP"
-            : "Sign in — HolyMedia MCP"
+            ? "Вход — HolyPilot"
+            : "Sign in — HolyPilot"
           : language === "ru"
-            ? "Восстановление пароля — HolyMedia MCP"
-            : "Reset password — HolyMedia MCP";
+            ? "Восстановление пароля — HolyPilot"
+            : "Reset password — HolyPilot";
   }, [language, mode]);
 
   function changeMode(next: AuthMode) {

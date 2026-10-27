@@ -1,10 +1,10 @@
-# HolyMedia MCP hosted beta onboarding
+# HolyPilot hosted beta onboarding
 
 Этот документ оставлен как короткая точка входа. Полный beta-scope описан в [BETA_READY_MVP_RU.md](BETA_READY_MVP_RU.md).
 
 ## Главный принцип
 
-HolyMedia MCP - hosted MCP-сервис. Клиент не скачивает GitHub-репозиторий, не запускает сервер локально и не редактирует `.env`/`ads_config.yaml`.
+HolyPilot - hosted MCP-сервис. Клиент не скачивает GitHub-репозиторий, не запускает сервер локально и не редактирует `.env`/`ads_config.yaml`.
 
 Клиент делает две вещи:
 
@@ -20,9 +20,9 @@ HolyMedia MCP - hosted MCP-сервис. Клиент не скачивает Gi
 5. Выбрать доступные рекламные аккаунты.
 6. Перейти в `MCP`, скопировать MCP URL и создать персональный MCP token.
 7. Сохранить raw token сразу: он показывается только один раз.
-8. Добавить HolyMedia MCP в Codex / Claude / другой MCP-клиент как hosted Streamable HTTP server.
+8. Добавить HolyPilot в Codex / Claude / другой MCP-клиент как hosted Streamable HTTP server.
 9. Указать `Authorization: Bearer <ваш персональный MCP token>`.
-10. Проверить tools запросом: `Проверь диагностику HolyMedia MCP`.
+10. Проверить tools запросом: `Проверь диагностику HolyPilot`.
 
 Старый общий beta token из `AD_MCP_WEB_API_TOKEN` остается server/operator fallback для smoke-проверок и текущей beta-инфраструктуры. Клиентский UI должен использовать персональный MCP token пользователя.
 

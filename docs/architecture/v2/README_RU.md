@@ -1,4 +1,4 @@
-# HolyMedia MCP v2: Phase 0
+# HolyPilot v2: Phase 0
 
 Дата аудита: 20 августа 2026 года  
 Исходная ревизия: `386a7c4` (`main`, совпадает с `origin/main`)

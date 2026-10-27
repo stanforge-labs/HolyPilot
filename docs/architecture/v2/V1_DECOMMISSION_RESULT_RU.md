@@ -1,4 +1,4 @@
-# HolyMedia MCP V1 Decommission Result
+# HolyPilot V1 Decommission Result
 
 Decommission timestamp: `2026-08-23T16:01:11Z`
 
@@ -72,5 +72,5 @@ gateway and extended Yandex/TikTok reporting remain outside this operation.
 
 **V1 DECOMMISSION COMPLETE**
 
-**HOLYMEDIA MCP V2 FULLY PRODUCTION**
+**HolyPilot V2 FULLY PRODUCTION**
 

@@ -1,4 +1,4 @@
-# HolyMedia MCP v2: Phase 0.5
+# HolyPilot v2: Phase 0.5
 
 ## Статус
 
@@ -11,7 +11,7 @@ Phase 0.5 выполнена для текущего v1 без переписы�
 Проверены:
 
 - текущий репозиторий `mcp-for-ads-v2`, все локальные ветки и история;
-- локальные рабочие каталоги HolyMedia MCP, Desktop, Downloads и пользовательская директория Hermes;
+- локальные рабочие каталоги HolyPilot, Desktop, Downloads и пользовательская директория Hermes;
 - старый VPS checkout `/opt/mcp-for-ads`, его ветка и история;
 - systemd units и deployment-конфигурация;
 - production database metadata.
