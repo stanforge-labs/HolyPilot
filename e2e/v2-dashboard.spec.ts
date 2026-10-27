@@ -52,7 +52,7 @@ async function selectProjectOption(
   await listbox.getByRole("option", { name: optionName, exact: true }).click();
 }
 
-test.describe("restored HolyMedia client UX", () => {
+test.describe("restored HolyPilot client UX", () => {
   test("uses route-backed dashboard navigation and keeps paused tools unavailable", async ({
     page,
   }) => {

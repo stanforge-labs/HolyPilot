@@ -195,7 +195,7 @@ export class McpPublicWriteService {
       approval_url: `${this.config.publicBaseUrl}/mcp/approve#${approvalToken}`,
       provider_mutation_sent: false,
       user_action:
-        "Open the HolyMedia approval URL and explicitly approve this change in your browser before calling commit_confirmed_preview.",
+        "Open the HolyPilot approval URL and explicitly approve this change in your browser before calling commit_confirmed_preview.",
     };
   }
 
@@ -226,7 +226,7 @@ export class McpPublicWriteService {
     };
   }
 
-  /** Called only behind HolyMedia cookie-session and CSRF guards. */
+  /** Called only behind HolyPilot cookie-session and CSRF guards. */
   public async decideApproval(
     principal: HumanPrincipal,
     rawNonce: string,

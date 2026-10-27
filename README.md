@@ -68,9 +68,12 @@ pnpm test
 
 - [PRODUCT.md](PRODUCT.md) — назначение продукта и принципы интерфейса.
 - [DESIGN.md](DESIGN.md) — визуальная система.
-- [V2 architecture](docs/architecture/v2/README_RU.md) — архитектурные решения и история перехода на v2.
-- [AI clients](docs/beta/AI_CLIENTS_MCP_RU.md) — подключение MCP-клиентов; документы `docs/beta` содержат также исторические сценарии beta.
-- [Deployment](DEPLOYING.md) — развёртывание и эксплуатация.
-- [Security](docs/beta/BETA_SECURITY_RU.md) — модель доступа и работа с секретами.
+- [Подключение](CONNECTING.md) — сценарий владельца и AI-клиента.
+- [Тестирование](TESTING.md) — локальные проверки и границы LIVE-приёмки.
+- [Архитектура v2](docs/architecture/v2/CONSOLIDATED_V1_V2_AUDIT_RU.md) — история перехода и проверенные решения.
+- [Развёртывание](DEPLOYING.md) — карта операторских документов.
+- [Модель безопасности OAuth](docs/architecture/v2/OAUTH_THREAT_MODEL_RU.md) — основные границы авторизации.
+
+Документы `docs/beta` и ранние планы оставлены как исторические материалы Python beta-runtime. Их команды, порты и оценки готовности не являются текущей инструкцией для v2.
 
 HolyPilot — название продукта. HolyMedia остаётся названием организации; MCP остаётся названием технического протокола.

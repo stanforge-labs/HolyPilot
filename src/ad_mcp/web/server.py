@@ -1155,7 +1155,7 @@ class AdsWebHandler(BaseHTTPRequestHandler):
                 return self._send_download(
                     report,
                     "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                    "HolyMedia-MCP-site-audit.docx",
+                    "HolyPilot-site-audit.docx",
                 )
             if route == "/api/meta/skills/collect-report.docx":
                 if not self._ensure_same_origin_session_post(route):
@@ -1178,7 +1178,7 @@ class AdsWebHandler(BaseHTTPRequestHandler):
                 return self._send_download(
                     report,
                     "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                    "HolyMedia-MCP-monthly-ads-report.docx",
+                    "HolyPilot-monthly-ads-report.docx",
                 )
             if route == "/api/meta/skills/collect-report.pdf":
                 if not self._ensure_same_origin_session_post(route):
@@ -1201,7 +1201,7 @@ class AdsWebHandler(BaseHTTPRequestHandler):
                 return self._send_download(
                     report,
                     "application/pdf",
-                    "HolyMedia-MCP-monthly-ads-report.pdf",
+                    "HolyPilot-monthly-ads-report.pdf",
                 )
             if route == "/api/auth/forgot-password":
                 payload = self._json_body()

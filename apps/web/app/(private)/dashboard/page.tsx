@@ -1317,7 +1317,7 @@ export default function DashboardPage() {
       const url = URL.createObjectURL(await response.blob());
       const link = document.createElement("a");
       link.href = url;
-      link.download = `holymedia-performance-report.${format}`;
+      link.download = `holypilot-performance-report.${format}`;
       link.style.display = "none";
       document.body.appendChild(link);
       link.click();
@@ -1408,7 +1408,7 @@ export default function DashboardPage() {
       const url = URL.createObjectURL(await response.blob());
       const link = document.createElement("a");
       link.href = url;
-      link.download = "holymedia-site-analysis.docx";
+      link.download = "holypilot-site-analysis.docx";
       link.click();
       URL.revokeObjectURL(url);
       notify("Отчёт анализа скачан.");
@@ -1608,7 +1608,7 @@ export default function DashboardPage() {
             </h1>
             <p>
               {active.accessStatus === "SUSPENDED"
-                ? "Рабочие функции временно недоступны. Обратитесь к администратору HolyMedia."
+                ? "Рабочие функции временно недоступны. Обратитесь к администратору HolyPilot."
                 : "Профиль компании и команда уже доступны. Рекламные подключения, AI-клиент и отчёты откроются после одобрения администратором."}
             </p>
             <button
@@ -3665,9 +3665,7 @@ function ClaudeInstructions({
         </li>
         <li>
           <strong>
-            {ru
-              ? "Заполните данные HolyPilot"
-              : "Enter the HolyPilot details"}
+            {ru ? "Заполните данные HolyPilot" : "Enter the HolyPilot details"}
           </strong>
           <dl className="codex-config oauth-config">
             <div>
@@ -3712,9 +3710,7 @@ function ClaudeInstructions({
           <small>{ru ? "После этого нажмите Add." : "Then select Add."}</small>
         </li>
         <li>
-          <strong>
-            {ru ? "Подключите HolyPilot" : "Connect HolyPilot"}
-          </strong>
+          <strong>{ru ? "Подключите HolyPilot" : "Connect HolyPilot"}</strong>
           <span>
             {ru
               ? "После добавления HolyPilot нажмите Connect."
@@ -3722,9 +3718,7 @@ function ClaudeInstructions({
           </span>
         </li>
         <li>
-          <strong>
-            {ru ? "Войдите в HolyPilot" : "Sign in to HolyPilot"}
-          </strong>
+          <strong>{ru ? "Войдите в HolyPilot" : "Sign in to HolyPilot"}</strong>
           <span>
             {ru
               ? "Claude откроет страницу HolyPilot в браузере. Войдите в свой аккаунт."
@@ -3910,9 +3904,7 @@ function ChatGPTInstructions({
         </li>
         <li>
           <strong>
-            {ru
-              ? "Заполните данные HolyPilot"
-              : "Enter the HolyPilot details"}
+            {ru ? "Заполните данные HolyPilot" : "Enter the HolyPilot details"}
           </strong>
           <dl className="codex-config oauth-config">
             <div>
@@ -3973,9 +3965,7 @@ function ChatGPTInstructions({
         </li>
         <li>
           <strong>
-            {ru
-              ? "Войдите через HolyPilot"
-              : "Sign in through HolyPilot"}
+            {ru ? "Войдите через HolyPilot" : "Sign in through HolyPilot"}
           </strong>
           <span>
             {ru

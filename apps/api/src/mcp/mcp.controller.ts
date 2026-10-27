@@ -441,7 +441,7 @@ export function mcpFailureMessage(error: unknown): string {
   }
   return error instanceof ProviderError
     ? "Запрос к рекламной платформе не выполнен."
-    : "Не удалось выполнить запрос HolyMedia. Попробуйте ещё раз.";
+    : "Не удалось выполнить запрос HolyPilot. Попробуйте ещё раз.";
 }
 
 export function googleAdsMcpErrorFields(error: unknown) {

@@ -680,7 +680,7 @@ export class McpPreviewService {
       reread: after,
       previous_name: before.name,
       provider_write_result: mutation.result,
-      provider_write_result_source: "HolyMedia Meta adapter",
+      provider_write_result_source: "HolyPilot Meta adapter",
       verification_source: "Meta Graph API campaign direct read",
       verification_retrieved_at: new Date().toISOString(),
       message:

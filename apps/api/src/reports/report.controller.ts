@@ -53,7 +53,7 @@ export class ReportController {
       )
       .header(
         "content-disposition",
-        "attachment; filename=holymedia-performance-report.docx",
+        "attachment; filename=holypilot-performance-report.docx",
       )
       .send(report);
   }
@@ -73,7 +73,7 @@ export class ReportController {
       )
       .header(
         "content-disposition",
-        "attachment; filename=holymedia-performance-report.pptx",
+        "attachment; filename=holypilot-performance-report.pptx",
       )
       .send(report);
   }

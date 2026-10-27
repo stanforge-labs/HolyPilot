@@ -1,4 +1,4 @@
-# HolyMedia RU/EN frontend routes
+# HolyPilot RU/EN frontend routes
 
 Inventory source: recursively enumerated `apps/web/app/**/page.tsx` before implementation, plus `components/dashboard-routes.ts` and the admin section registry. No API routes inferred as pages. RU is the default; URL is authoritative, not storage, cookies or Accept-Language.
 
@@ -48,6 +48,6 @@ Google Cloud Privacy URL remains `https://mcp.holymedia.kz/privacy`; English sup
 
 Local checks: repository lint/typecheck/build/secret scan and unit suites passed (API: 275 passed, 20 integration tests skipped without local DB). Production-build Playwright routing/accessibility/session/TikTok matrix: 66 passed, 2 real-DB browser tests deferred to isolated CI. Desktop/mobile and Light/Dark privacy screenshots inspected; no horizontal overflow. RU/EN policy content was mechanically compared against the owner's attachment and matched exactly.
 
-Only the frontend return-path allowlist in Google Login accepts `/en/dashboard/...` in addition to existing RU paths; OAuth redirect URI construction, scopes, state lifecycle, exchange and provider callbacks are untouched. Internal HolyMedia consent transaction UUIDs survive language switch; raw provider code/state/PKCE never do.
+Only the frontend return-path allowlist in Google Login accepts `/en/dashboard/...` in addition to existing RU paths; OAuth redirect URI construction, scopes, state lifecycle, exchange and provider callbacks are untouched. Internal HolyPilot consent transaction UUIDs survive language switch; raw provider code/state/PKCE never do.
 
 Browser fixtures are local, isolated and do not perform provider requests. Meta modules, provider config, callbacks, policies, DB data and connection handlers are unchanged; no Meta Graph smoke is authorized. Immutable production receipt is reported separately after deployment, not inferred from local checks.

@@ -163,13 +163,13 @@ const providerFacingWrites = new Set<string>([
 ]);
 const publicWriteDescriptions: Record<string, string> = {
   preview_change_campaign_name:
-    "Create a Meta Ads campaign rename preview without changing the campaign. Return the before/requested name, expiry and a HolyMedia URL for the user to approve in their browser.",
+    "Create a Meta Ads campaign rename preview without changing the campaign. Return the before/requested name, expiry and a HolyPilot URL for the user to approve in their browser.",
   preview_pause_campaign:
-    "Create a Meta Ads campaign pause preview without changing the campaign. Return the before/requested status, expiry and a HolyMedia URL for browser approval.",
+    "Create a Meta Ads campaign pause preview without changing the campaign. Return the before/requested status, expiry and a HolyPilot URL for browser approval.",
   preview_resume_campaign:
-    "Create a Meta Ads campaign resume preview without changing the campaign. Return the before/requested status, expiry and a HolyMedia URL for browser approval.",
+    "Create a Meta Ads campaign resume preview without changing the campaign. Return the before/requested status, expiry and a HolyPilot URL for browser approval.",
   commit_confirmed_preview:
-    "Execute a previously previewed Meta Ads campaign change only after separate HolyMedia browser approval. Accept only the exact preview_token; mutation fields cannot be supplied or changed here.",
+    "Execute a previously previewed Meta Ads campaign change only after separate HolyPilot browser approval. Accept only the exact preview_token; mutation fields cannot be supplied or changed here.",
 };
 
 export function isPublicReadTool(name: string): boolean {

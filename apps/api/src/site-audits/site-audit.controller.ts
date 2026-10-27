@@ -59,7 +59,7 @@ export class SiteAuditController {
       .header("content-type", item.mimeType)
       .header(
         "content-disposition",
-        "attachment; filename=HolyMedia-AI-site-audit.docx",
+        "attachment; filename=HolyPilot-AI-site-audit.docx",
       )
       .send(item.data);
   }

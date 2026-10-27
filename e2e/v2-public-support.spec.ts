@@ -3,8 +3,7 @@ import AxeBuilder from "@axe-core/playwright";
 
 for (const locale of ["ru", "en"] as const) {
   const path = locale === "ru" ? "/support" : "/en/support";
-  const title =
-    locale === "ru" ? "Поддержка HolyPilot" : "HolyPilot Support";
+  const title = locale === "ru" ? "Поддержка HolyPilot" : "HolyPilot Support";
 
   test(`public support page and legal links work in ${locale}`, async ({
     page,

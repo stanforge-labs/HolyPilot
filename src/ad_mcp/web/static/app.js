@@ -1439,7 +1439,7 @@
       const url = URL.createObjectURL(blob);
       const link = document.createElement("a");
       link.href = url;
-      link.download = `HolyMedia-MCP-ads-report-${safeFileDate()}.${format}`;
+      link.download = `HolyPilot-ads-report-${safeFileDate()}.${format}`;
       document.body.appendChild(link);
       link.click();
       link.remove();
@@ -1729,7 +1729,7 @@
       const blob = await response.blob();
       const link = document.createElement("a");
       link.href = URL.createObjectURL(blob);
-      link.download = `HolyMedia-MCP-site-audit-${safeFileDate()}.docx`;
+      link.download = `HolyPilot-site-audit-${safeFileDate()}.docx`;
       document.body.appendChild(link);
       link.click();
       link.remove();
@@ -3196,7 +3196,7 @@
           <label class="field"><span class="field__label">Business ID <small>(необязательно)</small></span><input name="business_id" inputmode="numeric" maxlength="32" placeholder="ID Business Portfolio" value="${escAttr(request.meta_business_id || "")}"></label>
           <label class="field"><span class="field__label">Facebook Page ID <small>(необязательно)</small></span><input name="page_id" inputmode="numeric" maxlength="32" value="${escAttr(request.meta_page_id || "")}"></label>
           <label class="field"><span class="field__label">Instagram username <small>(необязательно)</small></span><input name="instagram_username" maxlength="80" placeholder="@company" value="${escAttr(request.instagram_username || "")}"></label>
-          <label class="field"><span class="field__label">Как связаться</span><select name="contact_preference"><option value="email" ${request.contact_preference !== "telegram" && request.contact_preference !== "whatsapp" ? "selected" : ""}>Email из аккаунта HolyMedia</option><option value="telegram" ${request.contact_preference === "telegram" ? "selected" : ""}>Telegram</option><option value="whatsapp" ${request.contact_preference === "whatsapp" ? "selected" : ""}>WhatsApp</option></select></label>
+          <label class="field"><span class="field__label">Как связаться</span><select name="contact_preference"><option value="email" ${request.contact_preference !== "telegram" && request.contact_preference !== "whatsapp" ? "selected" : ""}>Email из аккаунта HolyPilot</option><option value="telegram" ${request.contact_preference === "telegram" ? "selected" : ""}>Telegram</option><option value="whatsapp" ${request.contact_preference === "whatsapp" ? "selected" : ""}>WhatsApp</option></select></label>
           <label class="field"><span class="field__label">Комментарий специалисту <small>(необязательно)</small></span><textarea name="client_note" rows="4" maxlength="2000" placeholder="Например: нужен доступ только к рекламе и отчётам.">${esc(request.client_note || "")}</textarea></label>
           <div class="callout callout--warn"><strong>Не отправляйте секреты</strong><span>HolyMedia не просит пароль Meta, access token, app secret или код из SMS. Доступ выдаётся через Business Manager.</span></div>
           <div class="modal-form-actions"><button type="submit" class="btn btn--primary">${request.id ? "Обновить заявку" : "Отправить заявку"}</button><button type="button" class="btn btn--ghost" data-client-modal-close>Закрыть</button></div>

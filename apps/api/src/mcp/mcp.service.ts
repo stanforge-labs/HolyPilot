@@ -1506,7 +1506,7 @@ export class McpService {
       case "describe_auth":
       case "describe_auth_strategy":
         return {
-          authentication: "scoped HolyMedia service token",
+          authentication: "scoped HolyPilot service token",
           authorization: "server-side workspace and account allowlist",
           writes: "disabled in V2 MCP compatibility surface",
         };

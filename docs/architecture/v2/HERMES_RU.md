@@ -1,6 +1,6 @@
 # Hermes V2
 
-Hermes — отдельный runtime `apps/hermes`, который работает поверх HolyMedia
+Hermes — отдельный runtime `apps/hermes`, который работает поверх HolyPilot
 MCP HTTP. Он не импортирует database package и не получает provider credentials.
 
 ## Безопасная конфигурация

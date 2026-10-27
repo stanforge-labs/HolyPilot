@@ -37,11 +37,7 @@ export function SiteFooter({
     >
       <div className="footer__left">
         <div className="footer__identity">
-          {holyPilot ? (
-            <LandingBrandLockup footer />
-          ) : (
-            <BrandLockup />
-          )}
+          {holyPilot ? <LandingBrandLockup footer /> : <BrandLockup />}
         </div>
         <a
           className="footer__partner"

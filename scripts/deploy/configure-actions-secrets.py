@@ -13,7 +13,7 @@ import urllib.request
 from nacl.public import PublicKey, SealedBox
 
 
-API = "https://api.github.com/repos/stanforge-labs/HolyMedia-MCP/actions/secrets"
+API = "https://api.github.com/repos/stanforge-labs/HolyPilot/actions/secrets"
 
 
 def github_token() -> str:
