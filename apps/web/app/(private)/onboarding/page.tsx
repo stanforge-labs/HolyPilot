@@ -47,8 +47,8 @@ export default function OnboardingPage() {
 
   useEffect(() => {
     document.title = ru
-      ? "Данные компании — HolyMedia MCP"
-      : "Company details — HolyMedia MCP";
+      ? "Данные компании — HolyPilot"
+      : "Company details — HolyPilot";
     void (async () => {
       const response = await fetch(`${API}/api/v1/workspaces`, {
         credentials: "include",
@@ -173,7 +173,7 @@ export default function OnboardingPage() {
         <div className="auth-language">
           <LanguageSwitcher compact />
         </div>
-        <p className="eyebrow">HOLYMEDIA MCP</p>
+        <p className="eyebrow">HolyPilot</p>
         <h1 id="onboarding-title">
           {ru ? "Данные компании" : "Company details"}
         </h1>

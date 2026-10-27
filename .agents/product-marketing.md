@@ -3,7 +3,7 @@
 *Last updated: 2026-07-16 (auto-draft из кодовой базы; уточнить с командой HolyMedia)*
 
 ## Product Overview
-**One-liner:** HolyMedia MCP подключает рекламные кабинеты к AI-чату и показывает, как растить заявки с рекламы, из поиска и с сайта.
+**One-liner:** HolyPilot подключает рекламные кабинеты к AI-чату и показывает, как растить заявки с рекламы, из поиска и с сайта.
 **What it does:** Hosted-сервис: пользователь подключает Meta Ads, Google Ads, TikTok Ads и Яндекс Директ через OAuth в личном кабинете, получает персональный MCP endpoint и ключ, добавляет его в Codex, Claude или ChatGPT — и дальше спрашивает AI о кампаниях, расходах и статусах обычным языком. Дополнительно: SEO-отчёты из Google Search Console и AI-аудит сайта с планом внедрения.
 **Product category:** AI-ассистент / коннектор для рекламных кабинетов (ищут как «подключить рекламный кабинет к ChatGPT/Claude», «AI для рекламы», «MCP для Ads»).
 **Product type:** B2B SaaS (hosted, beta), продукт digital-агентства HolyMedia.

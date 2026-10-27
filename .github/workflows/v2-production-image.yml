@@ -1,4 +1,4 @@
-name: HolyMedia MCP v2 production image
+name: HolyPilot v2 production image
 
 on:
   workflow_dispatch:

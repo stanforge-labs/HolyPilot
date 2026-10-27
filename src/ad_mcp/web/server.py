@@ -328,9 +328,9 @@ class AdsWebHandler(BaseHTTPRequestHandler):
         if user:
             return user
         self._send_json(
-            {"error": "Нужно войти в аккаунт HolyMedia MCP.", "code": "session_required"},
+            {"error": "Нужно войти в аккаунт HolyPilot.", "code": "session_required"},
             HTTPStatus.UNAUTHORIZED,
-            {"WWW-Authenticate": 'Session realm="HolyMedia MCP"'},
+            {"WWW-Authenticate": 'Session realm="HolyPilot"'},
         )
         return None
 
@@ -368,7 +368,7 @@ class AdsWebHandler(BaseHTTPRequestHandler):
             self._send_json(
                 {"error": "Нужен beta token для доступа к MCP web API.", "code": "api_auth_required"},
                 HTTPStatus.UNAUTHORIZED,
-                {"WWW-Authenticate": 'Bearer realm="HolyMedia MCP"'},
+                {"WWW-Authenticate": 'Bearer realm="HolyPilot"'},
             )
             return False
         # The legacy bearer is an operator credential, not a tenant identity.
@@ -378,7 +378,7 @@ class AdsWebHandler(BaseHTTPRequestHandler):
             self._send_json(
                 {"error": "Для доступа к данным нужна workspace-сессия.", "code": "session_required"},
                 HTTPStatus.UNAUTHORIZED,
-                {"WWW-Authenticate": 'Session realm="HolyMedia MCP"'},
+                {"WWW-Authenticate": 'Session realm="HolyPilot"'},
             )
             return False
         return True
@@ -438,7 +438,7 @@ class AdsWebHandler(BaseHTTPRequestHandler):
             return True
         self._send_json(
             {
-                "error": "Для действий через браузер нужна same-origin сессия. Повторите запрос из интерфейса HolyMedia MCP.",
+                "error": "Для действий через браузер нужна same-origin сессия. Повторите запрос из интерфейса HolyPilot.",
                 "code": "csrf_check_failed",
             },
             HTTPStatus.FORBIDDEN,
@@ -509,7 +509,7 @@ class AdsWebHandler(BaseHTTPRequestHandler):
         base = self._oauth_base_url()
         return {
             "resource": self.settings.public_mcp_url,
-            "resource_name": "HolyMedia MCP",
+            "resource_name": "HolyPilot",
             "authorization_servers": [base],
             "scopes_supported": ["adforge:mcp"],
             "bearer_methods_supported": ["header"],
@@ -1155,7 +1155,7 @@ class AdsWebHandler(BaseHTTPRequestHandler):
                 return self._send_download(
                     report,
                     "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                    "HolyMedia-MCP-site-audit.docx",
+                    "HolyPilot-site-audit.docx",
                 )
             if route == "/api/meta/skills/collect-report.docx":
                 if not self._ensure_same_origin_session_post(route):
@@ -1178,7 +1178,7 @@ class AdsWebHandler(BaseHTTPRequestHandler):
                 return self._send_download(
                     report,
                     "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-                    "HolyMedia-MCP-monthly-ads-report.docx",
+                    "HolyPilot-monthly-ads-report.docx",
                 )
             if route == "/api/meta/skills/collect-report.pdf":
                 if not self._ensure_same_origin_session_post(route):
@@ -1201,7 +1201,7 @@ class AdsWebHandler(BaseHTTPRequestHandler):
                 return self._send_download(
                     report,
                     "application/pdf",
-                    "HolyMedia-MCP-monthly-ads-report.pdf",
+                    "HolyPilot-monthly-ads-report.pdf",
                 )
             if route == "/api/auth/forgot-password":
                 payload = self._json_body()

@@ -124,7 +124,7 @@ export class LegacyReportController {
       )
       .header(
         "content-disposition",
-        "attachment; filename=holymedia-monthly-ads-report.docx",
+        "attachment; filename=holypilot-monthly-ads-report.docx",
       )
       .send(report);
   }
@@ -148,7 +148,7 @@ export class LegacyReportController {
       )
       .header(
         "content-disposition",
-        "attachment; filename=holymedia-monthly-ads-report.docx",
+        "attachment; filename=holypilot-monthly-ads-report.docx",
       )
       .send(report);
   }

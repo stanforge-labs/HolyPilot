@@ -1,1 +1,1 @@
-"""Web UI layer for HolyMedia MCP."""
+"""Web UI layer for HolyPilot."""

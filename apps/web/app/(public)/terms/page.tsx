@@ -5,8 +5,8 @@ import { SiteFooter } from "../../components/site-footer";
 
 export function generateMetadata() {
   return publicPageMetadata("/terms", {
-    ru: "Условия использования HolyMedia MCP",
-    en: "HolyMedia MCP Terms of Use",
+    ru: "Условия использования HolyPilot",
+    en: "HolyPilot Terms of Use",
   });
 }
 

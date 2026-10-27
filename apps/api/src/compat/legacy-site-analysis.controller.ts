@@ -73,7 +73,7 @@ export class LegacySiteAnalysisController {
       )
       .header(
         "content-disposition",
-        "attachment; filename=HolyMedia-MCP-site-audit.docx",
+        "attachment; filename=HolyPilot-site-audit.docx",
       )
       .send(report);
   }

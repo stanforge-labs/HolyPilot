@@ -3,7 +3,7 @@
 import { useLanguage } from "./language-switcher";
 import styles from "./landing-brand-lockup.module.css";
 
-/** Public-home identity only; the shared application BrandLockup stays unchanged. */
+/** Full HolyPilot lockup for the public home and its footer. */
 export function LandingBrandLockup({ footer = false }: { footer?: boolean }) {
   const language = useLanguage();
 

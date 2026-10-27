@@ -1,6 +1,6 @@
-# HolyMedia MCP beta-ready MVP
+# HolyPilot beta-ready MVP
 
-HolyMedia MCP - hosted MCP-сервис для работы с рекламными кабинетами через AI-клиенты. Пользователь подключает рекламные платформы через dashboard и OAuth, затем подключает уже развернутый MCP endpoint в Codex, Claude, Gemini или другой MCP-compatible клиент.
+HolyPilot - hosted MCP-сервис для работы с рекламными кабинетами через AI-клиенты. Пользователь подключает рекламные платформы через dashboard и OAuth, затем подключает уже развернутый MCP endpoint в Codex, Claude, Gemini или другой MCP-compatible клиент.
 
 Клиент не скачивает GitHub-репозиторий, не запускает Python-сервер локально и не редактирует `.env` или `ads_config.yaml`.
 
@@ -37,7 +37,7 @@ HolyMedia MCP - hosted MCP-сервис для работы с рекламны�
 
 ## Что можно спрашивать у AI
 
-- `Проверь диагностику HolyMedia MCP`.
+- `Проверь диагностику HolyPilot`.
 - `Покажи подключенные рекламные платформы`.
 - `Покажи список рекламных аккаунтов`.
 - `Покажи кампании Meta Ads`.

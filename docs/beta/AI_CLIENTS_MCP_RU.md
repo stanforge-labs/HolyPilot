@@ -1,6 +1,6 @@
-# Подключение HolyMedia MCP к AI-клиентам
+# Подключение HolyPilot к AI-клиентам
 
-HolyMedia MCP работает как hosted remote MCP server:
+HolyPilot работает как hosted remote MCP server:
 
 - URL: `https://your-domain.com/mcp`
 - Transport: Streamable HTTP
@@ -37,7 +37,7 @@ ADFORGE_MCP_CLIENT_TOKEN
 
 В Claude.ai форме `Add custom connector`:
 
-1. `Name`: `HolyMedia MCP`.
+1. `Name`: `HolyPilot`.
 2. `Remote MCP server URL`: `https://your-domain.com/mcp`.
 3. `OAuth Client ID`: оставить пустым или вставить значение из dashboard, если Claude зависает на `Checking connection`.
 4. `OAuth Client Secret`: оставить пустым или вставить одноразово показанный secret из dashboard.
@@ -49,7 +49,7 @@ ADFORGE_MCP_CLIENT_TOKEN
 1. Прочитать protected resource metadata.
 2. Найти authorization server metadata.
 3. Зарегистрировать OAuth client через Dynamic Client Registration.
-4. Открыть браузерный вход в HolyMedia MCP.
+4. Открыть браузерный вход в HolyPilot.
 5. Получить authorization code и обменять его на access token через PKCE.
 
 Для Claude API или MCP-клиента, который поддерживает token, используйте:
@@ -71,7 +71,7 @@ ADFORGE_MCP_CLIENT_TOKEN
 
 В ChatGPT форме `Новое приложение` / `Add custom connector`:
 
-1. `Название`: `HolyMedia MCP`.
+1. `Название`: `HolyPilot`.
 2. `Подключение`: `URL-адрес сервера`.
 3. `URL`: `https://mcp.holymedia.kz/mcp`.
 4. `Аутентификация`: `OAuth`.
@@ -81,11 +81,11 @@ ADFORGE_MCP_CLIENT_TOKEN
 
 Как работает подключение:
 
-1. ChatGPT читает protected resource metadata и authorization server metadata HolyMedia MCP.
+1. ChatGPT читает protected resource metadata и authorization server metadata HolyPilot.
 2. ChatGPT передаёт HTTPS metadata URL как `client_id`.
-3. HolyMedia MCP скачивает этот metadata document только с allowlisted доменов ChatGPT/OpenAI, проверяет `redirect_uris` и регистрирует client.
-4. При первом использовании ChatGPT открывает вход в HolyMedia MCP.
-5. После входа HolyMedia MCP выдаёт authorization code, а ChatGPT меняет его на access token через PKCE.
+3. HolyPilot скачивает этот metadata document только с allowlisted доменов ChatGPT/OpenAI, проверяет `redirect_uris` и регистрирует client.
+4. При первом использовании ChatGPT открывает вход в HolyPilot.
+5. После входа HolyPilot выдаёт authorization code, а ChatGPT меняет его на access token через PKCE.
 6. `/mcp` остаётся закрытым: без Bearer token endpoint отвечает `401`.
 
 Если ChatGPT пишет `CIMD недоступен`:

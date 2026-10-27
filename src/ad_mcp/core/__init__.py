@@ -1,1 +1,1 @@
-"""Core application services for HolyMedia MCP."""
+"""Core application services for HolyPilot."""

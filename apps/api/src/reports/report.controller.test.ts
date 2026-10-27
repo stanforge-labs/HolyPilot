@@ -53,7 +53,7 @@ describe("performance report downloads", () => {
     );
     expect(reply.header).toHaveBeenCalledWith(
       "content-disposition",
-      "attachment; filename=holymedia-performance-report.pptx",
+      "attachment; filename=holypilot-performance-report.pptx",
     );
   });
 });

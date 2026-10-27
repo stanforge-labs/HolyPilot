@@ -1,5 +1,5 @@
 [Unit]
-Description=HolyMedia MCP hosted HTTP transport
+Description=HolyPilot hosted HTTP transport
 After=network.target adforge-mcp-web.service
 
 [Service]

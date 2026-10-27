@@ -1,4 +1,4 @@
-name: HolyMedia MCP v2 browser and compatibility E2E
+name: HolyPilot v2 browser and compatibility E2E
 
 on:
   push:

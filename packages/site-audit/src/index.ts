@@ -1246,7 +1246,7 @@ export async function buildAuditDocx(input: {
     .slice(0, 8);
   const performanceNotes = performanceReportNotes(input.metrics);
   const children = [
-    new Paragraph({ text: "HOLYMEDIA MCP", heading: HeadingLevel.TITLE }),
+    new Paragraph({ text: "HolyPilot", heading: HeadingLevel.TITLE }),
     new Paragraph({ text: "AI-аудит сайта", heading: HeadingLevel.HEADING_1 }),
     new Paragraph({ text: input.url }),
     new Paragraph({

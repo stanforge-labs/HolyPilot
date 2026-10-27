@@ -1,4 +1,4 @@
-# HolyMedia MCP V2 — Stage 1: независимый UX/UI/functional audit
+# HolyPilot V2 — Stage 1: независимый UX/UI/functional audit
 
 Дата проверки: 2026-08-24  
 Цель: `https://mcp.holymedia.kz`  

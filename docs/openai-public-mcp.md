@@ -1,4 +1,6 @@
-# HolyMedia public MCP: implementation and rollout
+# HolyPilot public MCP: implementation and rollout
+
+> Исторический план внедрения. Утверждения о статусе развёртывания ниже относятся ко времени подготовки этого документа; актуальное состояние проверяется отдельно.
 
 This is **code-only and not deployed**. The future production endpoint is
 `https://mcp.holymedia.kz/mcp/public`; local acceptance uses an HTTPS tunnel
@@ -48,7 +50,7 @@ not an old fixed tool count. `confirm_preview`, `commit_preview`, `commit_meta_a
 selected account, campaign, analytics and structured-report tools
 in `mcp-public-tools.ts`; arbitrary-site analysis and capability aliases are
 omitted. Public write descriptions explicitly say preview does not mutate a
-provider and commit needs separate HolyMedia browser approval.
+provider and commit needs separate HolyPilot browser approval.
 
 ### Annotation rationale
 
@@ -106,7 +108,7 @@ POSTs also pass the nonce in a JSON body and clear it from sessionStorage on
 success. Both approval pages respond with `Referrer-Policy: no-referrer`,
 `Cache-Control: no-store` and noindex headers/metadata.
 
-An explicit Confirm or Cancel POST uses the HolyMedia cookie session and
+An explicit Confirm or Cancel POST uses the HolyPilot cookie session and
 existing CSRF protection. An MCP bearer token alone cannot authorize it. The
 server verifies exact preview user/workspace, active membership, active
 same-client OAuth refresh family with public-resource write grant, connected
@@ -122,7 +124,7 @@ checks; direct provider read; operation-specific stale check; both flags;
 atomic claim; at most one mutation; direct read-back; final status and audit.
 Campaign/account identity is always checked separately. For rename only a
 changed name is stale; for pause/resume only a changed status is stale. This
-is a HolyMedia optimistic-concurrency check, not a Meta version.
+is a HolyPilot optimistic-concurrency check, not a Meta version.
 
 The adapter mutates only `name` or `status` as appropriate. Read-back must
 match before `VERIFIED`. A request failure before accepted mutation is not

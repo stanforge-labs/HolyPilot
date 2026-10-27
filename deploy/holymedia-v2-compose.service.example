@@ -1,5 +1,5 @@
 [Unit]
-Description=HolyMedia MCP v2 production Compose stack
+Description=HolyPilot v2 production Compose stack
 Requires=docker.service
 After=docker.service network-online.target
 Wants=network-online.target

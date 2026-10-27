@@ -23,24 +23,24 @@ type LegalCopy = {
 const terms: Record<"ru" | "en", LegalCopy> = {
   ru: {
     eyebrow: "Правовая информация",
-    title: "Условия использования HolyMedia MCP",
+    title: "Условия использования HolyPilot",
     updated: "Последнее обновление: 22 июня 2026 года",
     intro: [
-      "Эти условия регулируют доступ к HolyMedia MCP: сайту, рабочему пространству, подключениям рекламных платформ, аналитике и связанным AI-функциям.",
-      "Используя HolyMedia MCP, вы соглашаетесь с этими условиями.",
+      "Эти условия регулируют доступ к HolyPilot: сайту, рабочему пространству, подключениям рекламных платформ, аналитике и связанным AI-функциям.",
+      "Используя HolyPilot, вы соглашаетесь с этими условиями.",
     ],
     sections: [
       {
         heading: "1. Описание сервиса",
         paragraphs: [
-          "HolyMedia MCP позволяет подключать рекламные кабинеты, просматривать кампании, статусы и основные показатели, готовить отчёты и задавать вопросы через совместимые AI-клиенты.",
+          "HolyPilot позволяет подключать рекламные кабинеты, просматривать кампании, статусы и основные показатели, готовить отчёты и задавать вопросы через совместимые AI-клиенты.",
           "Изменения в рекламных кабинетах не выполняются без отдельного подтверждения.",
         ],
       },
       {
         heading: "2. Право на использование",
         paragraphs: [
-          "У вас должны быть законные полномочия на подключение и просмотр рекламных кабинетов, которые вы авторизуете в HolyMedia MCP.",
+          "У вас должны быть законные полномочия на подключение и просмотр рекламных кабинетов, которые вы авторизуете в HolyPilot.",
         ],
       },
       {
@@ -52,7 +52,7 @@ const terms: Record<"ru" | "en", LegalCopy> = {
       {
         heading: "4. Подключения рекламных платформ",
         paragraphs: [
-          "Подключая платформу, вы разрешаете HolyMedia MCP получать данные в пределах разрешений, показанных на экране OAuth. Вы можете отозвать доступ в HolyMedia MCP или настройках платформы.",
+          "Подключая платформу, вы разрешаете HolyPilot получать данные в пределах разрешений, показанных на экране OAuth. Вы можете отозвать доступ в HolyPilot или настройках платформы.",
         ],
       },
       {
@@ -88,7 +88,7 @@ const terms: Record<"ru" | "en", LegalCopy> = {
       {
         heading: "10. Интеллектуальная собственность",
         paragraphs: [
-          "Интерфейс, код, документация, бренд и материалы HolyMedia MCP принадлежат соответствующим правообладателям и не могут распространяться без письменного разрешения.",
+          "Интерфейс, код, документация, бренд и материалы HolyPilot принадлежат соответствующим правообладателям и не могут распространяться без письменного разрешения.",
         ],
       },
       {
@@ -100,7 +100,7 @@ const terms: Record<"ru" | "en", LegalCopy> = {
       {
         heading: "12. Ограничение ответственности",
         paragraphs: [
-          "В максимальной степени, разрешённой законом, HolyMedia MCP не несёт ответственности за косвенные убытки, упущенную выгоду, рекламные расходы или действия сторонних платформ.",
+          "В максимальной степени, разрешённой законом, HolyPilot не несёт ответственности за косвенные убытки, упущенную выгоду, рекламные расходы или действия сторонних платформ.",
         ],
       },
       {
@@ -121,24 +121,24 @@ const terms: Record<"ru" | "en", LegalCopy> = {
   },
   en: {
     eyebrow: "Legal information",
-    title: "HolyMedia MCP Terms of Use",
+    title: "HolyPilot Terms of Use",
     updated: "Last updated: June 22, 2026",
     intro: [
-      "These terms govern access to HolyMedia MCP: the website, workspace, advertising platform connections, analytics, and related AI features.",
-      "By using HolyMedia MCP, you agree to these terms.",
+      "These terms govern access to HolyPilot: the website, workspace, advertising platform connections, analytics, and related AI features.",
+      "By using HolyPilot, you agree to these terms.",
     ],
     sections: [
       {
         heading: "1. Service description",
         paragraphs: [
-          "HolyMedia MCP lets you connect advertising accounts, view campaigns, statuses, and core metrics, prepare reports, and ask questions through compatible AI clients.",
+          "HolyPilot lets you connect advertising accounts, view campaigns, statuses, and core metrics, prepare reports, and ask questions through compatible AI clients.",
           "Real changes in advertising accounts are not performed without separate confirmation.",
         ],
       },
       {
         heading: "2. Right to use",
         paragraphs: [
-          "You must have legal authority to connect and view the advertising accounts you authorize in HolyMedia MCP.",
+          "You must have legal authority to connect and view the advertising accounts you authorize in HolyPilot.",
         ],
       },
       {
@@ -150,7 +150,7 @@ const terms: Record<"ru" | "en", LegalCopy> = {
       {
         heading: "4. Advertising platform connections",
         paragraphs: [
-          "By connecting a platform, you allow HolyMedia MCP to receive data within the permissions shown on the OAuth consent screen. You can revoke access in HolyMedia MCP or the platform settings.",
+          "By connecting a platform, you allow HolyPilot to receive data within the permissions shown on the OAuth consent screen. You can revoke access in HolyPilot or the platform settings.",
         ],
       },
       {
@@ -186,7 +186,7 @@ const terms: Record<"ru" | "en", LegalCopy> = {
       {
         heading: "10. Intellectual property",
         paragraphs: [
-          "The HolyMedia MCP interface, code, documentation, brand, and materials belong to their rights holders and may not be distributed without written permission.",
+          "The HolyPilot interface, code, documentation, brand, and materials belong to their rights holders and may not be distributed without written permission.",
         ],
       },
       {
@@ -198,7 +198,7 @@ const terms: Record<"ru" | "en", LegalCopy> = {
       {
         heading: "12. Limitation of liability",
         paragraphs: [
-          "To the maximum extent permitted by law, HolyMedia MCP is not liable for indirect losses, lost profits, advertising expenses, or actions of third-party platforms.",
+          "To the maximum extent permitted by law, HolyPilot is not liable for indirect losses, lost profits, advertising expenses, or actions of third-party platforms.",
         ],
       },
       {
@@ -227,7 +227,7 @@ export function LegalContent({ kind }: { kind: "privacy" | "terms" }) {
     document.title =
       kind === "privacy"
         ? privacyCopy[language].split("\n")[0]!.slice(2)
-        : `${copy.title} | HolyMedia MCP`;
+        : `${copy.title} | HolyPilot`;
   }, [copy.title, kind, language]);
 
   if (kind === "privacy")
@@ -291,7 +291,7 @@ export function LegalContent({ kind }: { kind: "privacy" | "terms" }) {
       <section>
         <h2>{copy.contact}</h2>
         <p>
-          <strong>HolyMedia MCP</strong>
+          <strong>HolyPilot</strong>
           <br />
           Email: <a href="mailto:mcp@holymedia.kz">mcp@holymedia.kz</a>
           <br />

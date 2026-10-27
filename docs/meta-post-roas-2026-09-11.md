@@ -22,7 +22,7 @@ Meta explicitly requires `pages_read_user_content` permission or `Page Public Co
 ## Behavior
 
 - `get_page_post` makes a fresh direct Graph GET using the existing Page-token resolver and base fields + shares. It does not reuse a previous list result.
-- `get_page_post_engagement` requests actual engagement fields; when Meta supplies the specific requirement, HolyMedia exposes `meta_permission_required`, `required_permission`, and `alternative_feature`. Generic code 10 alone does not invent a named permission.
+- `get_page_post_engagement` requests actual engagement fields; when Meta supplies the specific requirement, HolyPilot exposes `meta_permission_required`, `required_permission`, and `alternative_feature`. Generic code 10 alone does not invent a named permission.
 - `purchase_roas` was rejected locally because it was absent from the metric allowlist. It is now passed under its actual Meta name and parsed as action statistics, not replaced with another ROAS metric.
 - The response distinguishes requested, returned, unsupported and unavailable metrics. Omitted ROAS is not fabricated as numeric zero. Empty action arrays are valid empty data.
 - A deterministic code-100 mixed request containing ROAS may retry once without ROAS. Only if that request succeeds are its data returned with an explicit rejected-combination explanation. Auth failures and rate limits never enter this fallback. Arbitrary unknown metrics remain locally rejected.

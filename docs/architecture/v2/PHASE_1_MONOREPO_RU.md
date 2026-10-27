@@ -1,4 +1,4 @@
-# HolyMedia MCP v2: Phase 1 foundation
+# HolyPilot v2: Phase 1 foundation
 
 ## Scope
 

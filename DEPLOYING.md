@@ -1,27 +1,15 @@
-# Развёртывание AdForge MCP
+# Развёртывание HolyPilot
 
-Актуальная beta-модель: AdForge MCP разворачивает оператор/разработчик проекта на VPS/WPS как hosted service. Beta-клиент не скачивает GitHub-репозиторий и не запускает MCP локально.
+HolyPilot v2 состоит из веб-интерфейса, API, фоновых задач, PostgreSQL и Redis. Production развёртывание выполняет оператор по отдельному утверждённому процессу с backup, миграционными проверками и контролем доступности. Команда локальной разработки не является инструкцией для production.
 
-Основная инструкция для production-like beta:
+## Документы
 
-- [docs/beta/VPS_DEPLOYMENT_RU.md](docs/beta/VPS_DEPLOYMENT_RU.md)
+- [Архитектура и история перехода на v2](docs/architecture/v2/CONSOLIDATED_V1_V2_AUDIT_RU.md).
+- [Модель окружений](docs/architecture/v2/ENVIRONMENT_MODEL_RU.md).
+- [Локальная разработка](docs/architecture/v2/LOCAL_DEVELOPMENT_RU.md).
+- [Staging runbook](docs/deploy/STAGING_RU.md).
+- [API-only Google Ads release](docs/google-ads-api-only-release.md).
 
-Связанные документы:
+Перед выпуском проверьте актуальные CI, backup и SHA-256, миграции, OAuth callback URLs, конфигурацию Host/Origin и разрешения на запись для конкретного окружения. Технические имена контейнеров, пакетов и доменов могут содержать прежнее название: их нельзя менять только ради ребрендинга без плана миграции.
 
-- [docs/beta/ENVIRONMENT_RU.md](docs/beta/ENVIRONMENT_RU.md) - env variables.
-- [docs/beta/REVERSE_PROXY_RU.md](docs/beta/REVERSE_PROXY_RU.md) - Nginx/Caddy и HTTPS.
-- [docs/beta/SYSTEMD_SERVICE_RU.md](docs/beta/SYSTEMD_SERVICE_RU.md) - systemd units.
-- [docs/beta/STORAGE_AND_BACKUP_RU.md](docs/beta/STORAGE_AND_BACKUP_RU.md) - storage, backup, restore.
-- [docs/beta/BETA_DEMO_CHECKLIST_RU.md](docs/beta/BETA_DEMO_CHECKLIST_RU.md) - проверка beta-demo.
-
-Коротко:
-
-```bash
-cd /opt/adforge-mcp
-./.venv/bin/python -m pip install -e ".[google,meta]"
-sudo systemctl enable --now adforge-mcp-web adforge-mcp-http
-curl https://your-domain.com/health
-curl https://your-domain.com/ready
-```
-
-Web dashboard/API слушает `127.0.0.1:8765`, hosted MCP transport слушает `127.0.0.1:8766/mcp`, публичный доступ идет через reverse proxy и HTTPS.
+Документы [docs/beta](docs/beta) относятся к историческому Python beta-runtime и не описывают текущий v2 deployment.

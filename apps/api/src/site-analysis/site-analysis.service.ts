@@ -143,7 +143,7 @@ export class SiteAnalysisService {
         {
           children: [
             new Paragraph({
-              text: "HOLYMEDIA MCP",
+              text: "HolyPilot",
               heading: HeadingLevel.TITLE,
             }),
             new Paragraph({

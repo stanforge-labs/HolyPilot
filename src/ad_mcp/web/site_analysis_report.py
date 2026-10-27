@@ -37,7 +37,7 @@ def build_site_analysis_docx(analysis: dict[str, Any]) -> bytes:
         style.font.size = Pt(size)
         style.font.color.rgb = RGBColor.from_string(color)
 
-    title = document.add_heading("AI-анализ сайта HolyMedia MCP", 0)
+    title = document.add_heading("AI-анализ сайта HolyPilot", 0)
     title.alignment = WD_ALIGN_PARAGRAPH.LEFT
     document.add_paragraph(_text(analysis.get("url")))
     score = document.add_paragraph()

@@ -1,4 +1,4 @@
-# Восстановление UI/UX V1 поверх HolyMedia MCP V2
+# Восстановление UI/UX V1 поверх HolyPilot V2
 
 ## Основание
 

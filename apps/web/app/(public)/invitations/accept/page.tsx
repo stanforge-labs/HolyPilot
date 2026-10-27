@@ -71,7 +71,7 @@ export default function AcceptInvitationPage() {
           <LanguageSwitcher compact />
         </div>
         <Link className="back-link" href="/">
-          HolyMedia MCP v2
+          HolyPilot v2
         </Link>
         <h1 id="invitation-title">Принять приглашение</h1>
         <p className="muted">

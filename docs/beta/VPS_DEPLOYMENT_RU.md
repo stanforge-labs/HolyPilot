@@ -1,6 +1,6 @@
 # VPS/WPS deployment для hosted beta
 
-Этот документ описывает production-like beta запуск HolyMedia MCP на VPS/WPS. GitHub clone и настройку сервера делает оператор/разработчик проекта. Beta-клиент не скачивает репозиторий и не запускает MCP локально.
+Этот документ описывает production-like beta запуск HolyPilot на VPS/WPS. GitHub clone и настройку сервера делает оператор/разработчик проекта. Beta-клиент не скачивает репозиторий и не запускает MCP локально.
 
 Для реального первого deploy используйте:
 

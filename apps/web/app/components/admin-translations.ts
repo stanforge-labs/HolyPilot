@@ -99,8 +99,8 @@ export const adminTranslations: Array<[string, string]> = [
   ["Назначить полный доступ / бессрочно?", "Assign full lifetime access?"],
   ["Снять полный бессрочный доступ?", "Remove full lifetime access?"],
   [
-    "Вы действительно хотите предоставить этой компании полный бессрочный доступ ко всем функциям HolyMedia MCP? Оплата и срок действия не создаются.",
-    "Grant this company full lifetime access to all HolyMedia MCP features? No payment or expiration date will be created.",
+    "Вы действительно хотите предоставить этой компании полный бессрочный доступ ко всем функциям HolyPilot? Оплата и срок действия не создаются.",
+    "Grant this company full lifetime access to all HolyPilot features? No payment or expiration date will be created.",
   ],
   [
     "Бессрочный доступ будет снят. После этого можно назначить обычный коммерческий тариф или trial.",

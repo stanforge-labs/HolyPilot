@@ -1,86 +1,21 @@
-# Как тестировать AdForge MCP
+# Проверка HolyPilot
 
-AdForge MCP тестируется в двух разных режимах:
+## Локальная разработка v2
 
-1. Beta customer flow - проверка уже развернутого hosted dashboard/MCP.
-2. Developer flow - локальные тесты репозитория и серверной логики.
-
-Beta-клиент не скачивает репозиторий и не запускает MCP локально.
-
-## Beta customer flow
-
-Используйте [docs/beta/BETA_DEMO_CHECKLIST_RU.md](docs/beta/BETA_DEMO_CHECKLIST_RU.md).
-
-Короткий smoke:
-
-1. Открыть dashboard URL.
-2. Ввести beta token, если dashboard запросил доступ.
-3. Открыть `Connections`.
-4. Проверить hosted MCP URL.
-5. Подключить Meta Ads/Google Ads через OAuth или проверить уже сохраненное подключение.
-6. Запустить `Run diagnostics`.
-7. Подключить MCP URL в Codex/Claude.
-8. Выполнить запросы:
-   - `Проверь диагностику AdForge MCP`.
-   - `Покажи подключенные рекламные аккаунты`.
-   - `Покажи кампании Meta Ads`.
-   - `Сделай preview изменения бюджета кампании, но ничего не применяй`.
-
-Ожидаемый safety-result: dangerous action возвращает `will_apply=false`.
-
-## Developer flow
-
-Локальный запуск нужен разработчикам и серверной команде.
-
-### Windows
+Требуются Node.js 24, pnpm 11.1.3 и Docker Compose. Настройка окружения и адреса сервисов описаны в [руководстве по локальному запуску](docs/architecture/v2/LOCAL_DEVELOPMENT_RU.md).
 
 ```powershell
-cd "C:\MCP\AdForge-MCP"
-py -3.11 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -e ".[dev,google,meta]"
+pnpm install --frozen-lockfile
+pnpm format:check
+pnpm lint
+pnpm typecheck
+pnpm test
 ```
 
-### Linux / VPS
+Для проверки сборки используйте `pnpm build`. Браузерные тесты запускаются отдельно через `pnpm test:e2e` с подготовленной изолированной тестовой средой. Проверка секретов: `pnpm security:secrets`.
 
-```bash
-cd /opt/adforge-mcp
-python3.11 -m venv .venv
-./.venv/bin/python -m pip install -e ".[dev,google,meta]"
-```
+## Проверка пользовательского сценария
 
-## Developer checks
+В разрешённом окружении проверьте вход, доступные рабочие пространства, подключение платформы, выбор аккаунта, авторизацию MCP-клиента и безопасный запрос на чтение. Проверка операции записи требует отдельного плана, профиля доступа и подтверждения владельца. Успех локальных тестов не доказывает доступ к реальному рекламному аккаунту или работу WRITE в production.
 
-```powershell
-.\.venv\Scripts\python.exe -m pytest -q
-.\.venv\Scripts\python.exe -m compileall src
-node --check src/ad_mcp/web/static/app.js
-.\.venv\Scripts\python.exe scripts/smoke_mcp_beta.py
-```
-
-## Local dashboard check
-
-```powershell
-.\.venv\Scripts\python.exe -m ad_mcp.web.server
-```
-
-Открыть:
-
-```text
-http://127.0.0.1:8765
-```
-
-## Local hosted MCP transport check
-
-```powershell
-.\.venv\Scripts\ad-mcp-http.exe
-```
-
-По умолчанию MCP route:
-
-```text
-http://127.0.0.1:8766/mcp
-```
-
-## Secrets
-
-Локальные `.env`, `ads_config.yaml` и `tokens/connections.json` нужны только developer/server runtime и не коммитятся.
+Материалы [docs/beta](docs/beta) сохраняют исторические сценарии старого Python beta-runtime; его команды и порты не являются текущим способом тестировать v2.

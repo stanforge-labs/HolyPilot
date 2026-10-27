@@ -1,10 +1,10 @@
 # Gemini, ChatGPT и другие MCP clients
 
-Этот документ описывает общий принцип подключения HolyMedia MCP в Gemini или другой MCP-compatible клиент. Конкретный UI клиента может отличаться.
+Этот документ описывает общий принцип подключения HolyPilot в Gemini или другой MCP-compatible клиент. Конкретный UI клиента может отличаться.
 
 ## Главный принцип
 
-HolyMedia MCP уже развернут как hosted service. Пользователь подключает внешний MCP endpoint, а рекламные аккаунты подключает отдельно через HolyMedia dashboard.
+HolyPilot уже развернут как hosted service. Пользователь подключает внешний MCP endpoint, а рекламные аккаунты подключает отдельно через HolyPilot dashboard.
 
 Не нужно:
 
@@ -15,7 +15,7 @@ HolyMedia MCP уже развернут как hosted service. Пользова�
 
 ## Что нужно клиенту
 
-- Name: `HolyMedia MCP`.
+- Name: `HolyPilot`.
 - URL: `https://your-domain.com/mcp`.
 - Auth header:
 
@@ -27,7 +27,7 @@ Authorization: Bearer <PERSONAL_MCP_TOKEN>
 
 ```json
 {
-  "name": "HolyMedia MCP",
+  "name": "HolyPilot",
   "url": "https://your-domain.com/mcp",
   "headers": {
     "Authorization": "Bearer <PERSONAL_MCP_TOKEN>"
@@ -44,12 +44,12 @@ Authorization: Bearer <PERSONAL_MCP_TOKEN>
 3. Добавить hosted MCP URL в клиент.
 4. Передать персональный MCP token безопасным способом, который поддерживает клиент.
 5. Проверить появление tools.
-6. Запустить диагностику: `Проверь HolyMedia MCP`.
+6. Запустить диагностику: `Проверь HolyPilot`.
 7. Запросить аккаунты: `Покажи подключенные рекламные аккаунты`.
 
 ## Ограничения
 
 - Возможности конкретного MCP-клиента могут отличаться.
 - Если клиент не поддерживает custom headers/Bearer token, нужен другой supported auth способ. Для ChatGPT Apps/connector сценария безопасный путь - OAuth 2.1, а не отключение auth.
-- Рекламные аккаунты подключаются только через HolyMedia dashboard, не внутри Gemini/Codex/Claude.
+- Рекламные аккаунты подключаются только через HolyPilot dashboard, не внутри Gemini/Codex/Claude.
 - Dangerous actions остаются preview-only.

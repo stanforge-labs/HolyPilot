@@ -1,6 +1,6 @@
 # Security hardening для hosted beta
 
-HolyMedia MCP остается hosted MCP-сервисом. Клиент подключается к dashboard и hosted MCP endpoint, а не запускает проект локально.
+HolyPilot остается hosted MCP-сервисом. Клиент подключается к dashboard и hosted MCP endpoint, а не запускает проект локально.
 
 ## Access model
 

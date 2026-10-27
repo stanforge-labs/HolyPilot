@@ -21,7 +21,7 @@ const messages = {
   write_scope_required:
     "Для подтверждения изменения нужен ключ в режиме «Контролируемая запись».",
   preview_not_confirmed:
-    "Сначала подтвердите этот preview в HolyMedia через ссылку из результата preview.",
+    "Сначала подтвердите этот preview в HolyPilot через ссылку из результата preview.",
   preview_stale:
     "Кампания изменилась после preview. Создайте новый preview и подтвердите его.",
   public_write_disabled:

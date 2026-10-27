@@ -1,4 +1,4 @@
-# Beta acceptance checklist HolyMedia MCP
+# Beta acceptance checklist HolyPilot
 
 Чеклист фиксирует минимальные критерии, при которых hosted beta можно считать готовой к ограниченному запуску.
 

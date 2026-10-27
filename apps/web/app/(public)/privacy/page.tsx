@@ -5,8 +5,8 @@ import { SiteFooter } from "../../components/site-footer";
 
 export function generateMetadata() {
   return publicPageMetadata("/privacy", {
-    ru: "Политика конфиденциальности HolyMedia MCP",
-    en: "HolyMedia MCP Privacy Policy",
+    ru: "Политика конфиденциальности HolyPilot",
+    en: "HolyPilot Privacy Policy",
   });
 }
 

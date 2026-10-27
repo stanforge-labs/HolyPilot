@@ -1,6 +1,6 @@
 # Diagnostics для beta MVP
 
-HolyMedia MCP имеет единый слой диагностики для backend, hosted OAuth connections, MCP transport и provider read checks.
+HolyPilot имеет единый слой диагностики для backend, hosted OAuth connections, MCP transport и provider read checks.
 
 ## Backend endpoints
 

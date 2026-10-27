@@ -59,7 +59,7 @@ export function languageSwitchHref(href: string, locale: Locale): string {
     for (const value of url.searchParams.getAll(key)) safe.append(key, value);
   }
   const next = url.searchParams.get("next");
-  // These two frontend forms already receive a HolyMedia one-time code in
+  // These two frontend forms already receive a HolyPilot one-time code in
   // their URL. Preserve it only on the same form, never on provider callbacks.
   if (
     ["/auth/reset", "/invitations/accept"].includes(withoutLocale(url.pathname))
@@ -71,7 +71,7 @@ export function languageSwitchHref(href: string, locale: Locale): string {
   // fragment or legacy query nonce to the next locale URL.
   if (withoutLocale(url.pathname) === "/mcp/approve")
     return localizedHref(url.pathname, locale);
-  // HolyMedia UI continuation IDs are not provider OAuth state/code. Keep only
+  // HolyPilot UI continuation IDs are not provider OAuth state/code. Keep only
   // validated internal UUIDs so switching the consent/login UI cannot lose it.
   for (const key of ["oauth_transaction", "transaction"]) {
     const value = url.searchParams.get(key);

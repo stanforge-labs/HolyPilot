@@ -1,6 +1,6 @@
 # Reverse proxy и HTTPS
 
-HolyMedia MCP beta публикуется через reverse proxy. Web dashboard и MCP transport должны слушать только localhost.
+HolyPilot beta публикуется через reverse proxy. Web dashboard и MCP transport должны слушать только localhost.
 
 ## Recommended internal routing
 

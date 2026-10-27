@@ -12,15 +12,15 @@
     "test": "vitest run src --passWithNoTests"
   },
   "dependencies": {
+    "@axe-core/playwright": "^4.13.0",
     "@holymedia/config": "workspace:*",
     "@holymedia/contracts": "workspace:*",
     "@holymedia/database": "workspace:*",
     "@holymedia/observability": "workspace:*",
     "@holymedia/site-audit": "workspace:*",
-    "@axe-core/playwright": "^4.13.0",
     "bullmq": "6.1.2",
     "ioredis": "6.0.0",
-    "lighthouse": "13.4.1",
+    "lighthouse": "13.5.0",
     "playwright": "1.55.1"
   },
   "devDependencies": {

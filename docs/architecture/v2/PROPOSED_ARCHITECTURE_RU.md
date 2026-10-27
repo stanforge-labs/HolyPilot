@@ -1,4 +1,4 @@
-# Proposed HolyMedia MCP v2 Architecture
+# Proposed HolyPilot v2 Architecture
 
 ## Recommendation
 

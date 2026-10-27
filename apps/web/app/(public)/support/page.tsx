@@ -5,8 +5,8 @@ import { SiteFooter } from "../../components/site-footer";
 
 export function generateMetadata() {
   return publicPageMetadata("/support", {
-    ru: "Поддержка HolyMedia MCP",
-    en: "HolyMedia MCP Support",
+    ru: "Поддержка HolyPilot",
+    en: "HolyPilot Support",
   });
 }
 

@@ -203,7 +203,7 @@ async function pptxBuffer(
   );
   zip.file(
     "docProps/core.xml",
-    `<?xml version="1.0" encoding="UTF-8"?><cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/"><dc:title>${escapeXml(title)}</dc:title><dc:creator>HolyMedia MCP</dc:creator></cp:coreProperties>`,
+    `<?xml version="1.0" encoding="UTF-8"?><cp:coreProperties xmlns:cp="http://schemas.openxmlformats.org/package/2006/metadata/core-properties" xmlns:dc="http://purl.org/dc/elements/1.1/"><dc:title>${escapeXml(title)}</dc:title><dc:creator>HolyPilot</dc:creator></cp:coreProperties>`,
   );
   zip.file(
     "ppt/presentation.xml",
@@ -215,11 +215,11 @@ async function pptxBuffer(
   );
   zip.file(
     "ppt/theme/theme1.xml",
-    '<?xml version="1.0" encoding="UTF-8"?><a:theme xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" name="HolyMedia"><a:themeElements><a:clrScheme name="HolyMedia"><a:dk1><a:srgbClr val="28252C"/></a:dk1><a:lt1><a:srgbClr val="FFFFFF"/></a:lt1><a:dk2><a:srgbClr val="42195C"/></a:dk2><a:lt2><a:srgbClr val="F1EAF6"/></a:lt2><a:accent1><a:srgbClr val="42195C"/></a:accent1><a:accent2><a:srgbClr val="7B4A96"/></a:accent2><a:accent3><a:srgbClr val="198754"/></a:accent3><a:accent4><a:srgbClr val="A66A00"/></a:accent4><a:hlink><a:srgbClr val="42195C"/></a:hlink><a:folHlink><a:srgbClr val="7B4A96"/></a:folHlink></a:clrScheme><a:fontScheme name="HolyMedia"><a:majorFont><a:latin typeface="Aptos Display"/></a:majorFont><a:minorFont><a:latin typeface="Aptos"/></a:minorFont></a:fontScheme><a:fmtScheme name="HolyMedia"><a:fillStyleLst/><a:lnStyleLst/><a:effectStyleLst/><a:bgFillStyleLst/></a:fmtScheme></a:themeElements></a:theme>',
+    '<?xml version="1.0" encoding="UTF-8"?><a:theme xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" name="HolyPilot"><a:themeElements><a:clrScheme name="HolyPilot"><a:dk1><a:srgbClr val="28252C"/></a:dk1><a:lt1><a:srgbClr val="FFFFFF"/></a:lt1><a:dk2><a:srgbClr val="42195C"/></a:dk2><a:lt2><a:srgbClr val="F1EAF6"/></a:lt2><a:accent1><a:srgbClr val="42195C"/></a:accent1><a:accent2><a:srgbClr val="7B4A96"/></a:accent2><a:accent3><a:srgbClr val="198754"/></a:accent3><a:accent4><a:srgbClr val="A66A00"/></a:accent4><a:hlink><a:srgbClr val="42195C"/></a:hlink><a:folHlink><a:srgbClr val="7B4A96"/></a:folHlink></a:clrScheme><a:fontScheme name="HolyPilot"><a:majorFont><a:latin typeface="Aptos Display"/></a:majorFont><a:minorFont><a:latin typeface="Aptos"/></a:minorFont></a:fontScheme><a:fmtScheme name="HolyPilot"><a:fillStyleLst/><a:lnStyleLst/><a:effectStyleLst/><a:bgFillStyleLst/></a:fmtScheme></a:themeElements></a:theme>',
   );
   zip.file(
     "ppt/slideMasters/slideMaster1.xml",
-    '<p:sldMaster xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main"><p:cSld name="HolyMedia"><p:spTree><p:nvGrpSpPr><p:cNvPr id="1" name=""/><p:cNvGrpSpPr/><p:nvPr/></p:nvGrpSpPr><p:grpSpPr/></p:spTree></p:cSld><p:clrMap bg1="lt1" tx1="dk1" bg2="lt2" tx2="dk2" accent1="accent1" accent2="accent2" accent3="accent3" accent4="accent4" hlink="hlink" folHlink="folHlink"/><p:sldLayoutIdLst><p:sldLayoutId id="2147483649" r:id="rId2"/></p:sldLayoutIdLst><p:txStyles><p:titleStyle/><p:bodyStyle/><p:otherStyle/></p:txStyles></p:sldMaster>',
+    '<p:sldMaster xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:p="http://schemas.openxmlformats.org/presentationml/2006/main"><p:cSld name="HolyPilot"><p:spTree><p:nvGrpSpPr><p:cNvPr id="1" name=""/><p:cNvGrpSpPr/><p:nvPr/></p:nvGrpSpPr><p:grpSpPr/></p:spTree></p:cSld><p:clrMap bg1="lt1" tx1="dk1" bg2="lt2" tx2="dk2" accent1="accent1" accent2="accent2" accent3="accent3" accent4="accent4" hlink="hlink" folHlink="folHlink"/><p:sldLayoutIdLst><p:sldLayoutId id="2147483649" r:id="rId2"/></p:sldLayoutIdLst><p:txStyles><p:titleStyle/><p:bodyStyle/><p:otherStyle/></p:txStyles></p:sldMaster>',
   );
   zip.file(
     "ppt/slideMasters/_rels/slideMaster1.xml.rels",
@@ -442,7 +442,7 @@ export class ReportService {
     }).format(new Date(report.generatedAt));
 
     const document = new Document({
-      creator: "HolyMedia MCP",
+      creator: "HolyPilot",
       title: `Отчёт по рекламному кабинету: ${report.account.name}`,
       subject: "Клиентский отчёт по эффективности рекламы",
       description:
@@ -461,7 +461,7 @@ export class ReportService {
                   alignment: AlignmentType.RIGHT,
                   children: [
                     new TextRun({
-                      text: "HOLYMEDIA MCP  ·  PERFORMANCE REPORT",
+                      text: "HolyPilot  ·  PERFORMANCE REPORT",
                       color: "64748B",
                       size: 16,
                       bold: true,
@@ -491,7 +491,7 @@ export class ReportService {
               spacing: { before: 900, after: 180 },
               children: [
                 new TextRun({
-                  text: "HOLYMEDIA",
+                  text: "HOLYPILOT",
                   bold: true,
                   color: "2563EB",
                   size: 30,
@@ -728,7 +728,7 @@ export class ReportService {
         cover.rect(0, 0, 13.333, 7.5, PPT.purple);
         cover.ellipse(9.6, -1.15, 4.2, 4.2, "6E3889");
         cover.ellipse(10.75, 4.7, 2.1, 2.1, "5A2873");
-        cover.text(0.82, 1.35, 8.9, 0.45, "HOLYMEDIA MCP", {
+        cover.text(0.82, 1.35, 8.9, 0.45, "HolyPilot", {
           color: PPT.white,
           fontSize: 16,
           bold: true,

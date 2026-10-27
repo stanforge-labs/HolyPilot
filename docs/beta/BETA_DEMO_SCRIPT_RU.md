@@ -1,10 +1,10 @@
-# Beta demo script HolyMedia MCP
+# Beta demo script HolyPilot
 
 Сценарий рассчитан на короткую демонстрацию 10-15 минут. Он показывает hosted-модель, OAuth onboarding, MCP tools и preview-only безопасность.
 
 ## Цель demo
 
-Показать, что HolyMedia MCP уже работает как hosted MCP-сервис:
+Показать, что HolyPilot уже работает как hosted MCP-сервис:
 
 - клиент открывает dashboard;
 - подключает рекламные кабинеты через OAuth;
@@ -18,11 +18,11 @@
 
 Коротко сказать:
 
-> HolyMedia MCP не требует от клиента скачивать проект или запускать сервер. Сервер уже развернут на VPS/WPS. Клиент подключает рекламные кабинеты через dashboard и использует hosted MCP endpoint в Codex, Claude или другом MCP-клиенте.
+> HolyPilot не требует от клиента скачивать проект или запускать сервер. Сервер уже развернут на VPS/WPS. Клиент подключает рекламные кабинеты через dashboard и использует hosted MCP endpoint в Codex, Claude или другом MCP-клиенте.
 
 Показать token gate:
 
-- экран `HolyMedia MCP Beta` с полем `Beta access token`;
+- экран `HolyPilot Beta` с полем `Beta access token`;
 - ввести beta token, нажать `Enter dashboard`;
 - токен после входа нигде не показывается; в header есть `Sign out`.
 
@@ -92,7 +92,7 @@
 
 Показать на примере Codex или Claude:
 
-- Name: `HolyMedia MCP`;
+- Name: `HolyPilot`;
 - URL: `https://your-domain.com/mcp`;
 - Auth: `Authorization: Bearer <BETA_TOKEN>`.
 
@@ -103,7 +103,7 @@
 Запрос 1:
 
 ```text
-Проверь диагностику HolyMedia MCP.
+Проверь диагностику HolyPilot.
 ```
 
 Ожидаемо: краткий статус backend, MCP, platforms, env readiness, connected accounts.
