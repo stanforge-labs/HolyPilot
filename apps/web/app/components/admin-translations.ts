@@ -1,5 +1,10 @@
 /** Presentation dictionary only; no admin permissions or operations live here. */
 export const adminTranslations: Array<[string, string]> = [
+  ["Обновить OAuth-токен", "Refresh OAuth token"],
+  ["Проверяем токен…", "Checking token…"],
+  ["Токен доступа Google Ads действителен.", "The Google Ads access token is valid."],
+  ["Нужна авторизованная сессия администратора workspace.", "Sign in with permission to manage this workspace's connections."],
+  ["Результат не подтверждён. Перед повтором проверьте журнал операций.", "Result unconfirmed. Check the audit log before trying again."],
   ["Активна", "Active"],
   ["Активен", "Active"],
   ["На проверке", "Pending review"],

@@ -97,7 +97,9 @@ async function csrf(): Promise<string> {
   const response = await fetch(`${API}/api/v1/auth/csrf`, {
     credentials: "include",
   });
-  const data = (await response.json()) as { csrfToken: string };
+  if (!response.ok) throw new Error("CSRF unavailable");
+  const data = (await response.json()) as { csrfToken?: string };
+  if (typeof data.csrfToken !== "string" || !data.csrfToken.trim()) throw new Error("Missing CSRF token");
   return data.csrfToken;
 }
 
@@ -839,7 +841,121 @@ function Users({
   );
 }
 
+function GoogleTokenRefresh({
+  workspaceId,
+  connectionId,
+}: {
+  workspaceId: string;
+  connectionId: string;
+}) {
+  const pending = useRef(false);
+  const [state, setState] = useState<
+    "idle" | "pending" | "ok" | "denied" | "unknown"
+  >("idle");
+  const [requestId, setRequestId] = useState("");
+
+  async function refresh() {
+    if (pending.current) return;
+    pending.current = true;
+    setState("pending");
+    setRequestId("");
+    try {
+      const response = await fetch(
+        `${API}/api/v1/workspaces/${encodeURIComponent(workspaceId)}/connections/${encodeURIComponent(connectionId)}/refresh`,
+        {
+          method: "POST",
+          credentials: "include",
+          redirect: "error",
+          headers: { "x-csrf-token": await csrf() },
+        },
+      );
+      const id = response.headers.get("x-request-id");
+      if (id && /^[\da-f]{8}(?:-[\da-f]{4}){3}-[\da-f]{12}$/i.test(id))
+        setRequestId(id);
+      if (response.status === 401 || response.status === 403) {
+        setState("denied");
+        return;
+      }
+      if (!response.ok) throw new Error();
+      const result = (await response.json()) as Json;
+      if (
+        result.id !== connectionId ||
+        result.workspaceId !== workspaceId ||
+        result.provider !== "GOOGLE_ADS"
+      )
+        throw new Error();
+      setState("ok");
+    } catch {
+      setState("unknown");
+    } finally {
+      pending.current = false;
+    }
+  }
+
+  return (
+    <div>
+      <div className="muted"><code>{connectionId}</code></div>
+      <button
+        className="secondary-button btn--small"
+        type="button"
+        disabled={state !== "idle"}
+        onClick={() => void refresh()}
+      >
+        Обновить OAuth-токен
+      </button>
+      {state !== "idle" && (
+        <p
+          role={state === "unknown" || state === "denied" ? "alert" : "status"}
+        >
+          {
+            {
+              pending: "Проверяем токен…",
+              ok: "Токен доступа Google Ads действителен.",
+              denied: "Нужна авторизованная сессия администратора workspace.",
+              unknown:
+                "Результат не подтверждён. Перед повтором проверьте журнал операций.",
+            }[state]
+          }{" "}
+          {requestId && `Request ID: ${requestId}`}
+        </p>
+      )}
+    </div>
+  );
+}
+
 function Diagnostics({ data }: { data: Json }) {
+  const [managed, setManaged] = useState<string[]>([]);
+  // An admin session alone does not authorize a workspace OAuth operation.
+  useEffect(() => {
+    const controller = new AbortController();
+    async function loadManagedWorkspaces() {
+      try {
+        const response = await fetch(`${API}/api/v1/workspaces`, {
+          credentials: "include",
+          cache: "no-store",
+          signal: controller.signal,
+        });
+        if (!response.ok) return;
+        const rows: { id: string; role: string; accessStatus: string }[] =
+          await response.json();
+        if (!controller.signal.aborted) {
+          setManaged(
+            rows
+              .filter(
+                (row) =>
+                  row.accessStatus === "ACTIVE" &&
+                  ["OWNER", "ADMIN"].includes(row.role),
+              )
+              .map((row) => row.id),
+          );
+        }
+      } catch {
+        // The diagnostics table stays accessible without workspace actions.
+      }
+    }
+    void loadManagedWorkspaces();
+    return () => controller.abort();
+  }, []);
   const connections = Array.isArray(data.connections)
     ? (data.connections as Json[])
     : [];
@@ -856,6 +972,7 @@ function Diagnostics({ data }: { data: Json }) {
               <th>Статус</th>
               <th>Кабинеты</th>
               <th>Последняя ошибка</th>
+              <th>Действия</th>
             </tr>
           </thead>
           <tbody>
@@ -872,6 +989,20 @@ function Diagnostics({ data }: { data: Json }) {
                   <td>{value(count, "accounts")}</td>
                   <td className="admin-cell-text">
                     {humanError(value(row, "lastErrorCode"))}
+                  </td>
+                  <td>
+                    {row.provider === "GOOGLE_ADS" &&
+                      typeof row.id === "string" &&
+                      typeof workspace.id === "string" &&
+                      managed.includes(workspace.id) &&
+                      ["CONNECTED", "DEGRADED"].includes(
+                        value(row, "status"),
+                      ) && (
+                        <GoogleTokenRefresh
+                          workspaceId={workspace.id}
+                          connectionId={row.id}
+                        />
+                      )}
                   </td>
                 </tr>
               );
